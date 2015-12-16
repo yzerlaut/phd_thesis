@@ -1,0 +1,206 @@
+#+TITLE: Effects of cellular mechanisms and circuit properties on population activity in neocortical assemblies
+#+AUTHOR: Yann Zerlaut
+#+DATE: Spring 2016
+
+* Introduction
+
+[[cite:Kuhn2004]]
+
+\blindtext[0]
+
+[[citetext:Kuhn2004]]
+
+\blindtext[8]
+
+*** Abstract/Résumé
+
+**** Abstract
+
+
+\blindtext[2]
+
+**** Résumé
+
+Quelque chose en français avec tous les accents possibles : é, è , ê 
+
+
+
+*** Dynamics of neocortical networks
+
+**** Spikes
+
+\blindtext[10]
+
+**** KJ
+
+\blindtext[1]
+
+
+* Single cell computation 
+
+\blindtext[1]
+
+*** Some equations
+:PROPERTIES:
+:CUSTOM_ID: m1
+:END:
+
+   1. Introduction
+
+\begin{equation}
+\label{eq1}
+C_m \frac{dV}{dt} = g_L \cdot (E_L - V) + \sum_{\{t_i\}} \delta(t_i)
+\end{equation}
+
+   2. Main part
+
+Can we refer to [[eq1][Equation 1]] ?
+
+   3. Questions
+    
+\begin{equation}
+\label{eq:2}
+\mathbb{N}(x) = \frac{1}{\sigma \sqrt{2 \pi}} 
+\cdot \mathrm{e}^{-\frac{(\mu - x)^2}{2 \sigma^2}}
+\end{equation}
+    
+
+\blindtext[2]
+
+
+*** Some interesting stuff
+    
+
+*** an important point
+    
+    - subpoint a
+      
+    - subpoint
+
+
+* Circuit integration
+
+First we will reference to the [[#m1][Section 1]]
+
+*** Section associated to the first figure
+
+#+ATTR_LATEX: width=\linewidth
+#+label: fig:sfig1
+#+caption: Example of a classical one column figure
+[[file:fig.pdf]]
+
+
+#+ATTR_LATEX: width=\linewidth :float multicolumn
+#+label: fig:sfig1
+#+caption: Example of a two columns figure
+[[file:sfig.pdf]]
+
+*** generating the first figure :noexport:
+
+#+begin_src python
+import matplotlib.pylab as plt
+import matplotlib
+font = {'size'   : 10}
+matplotlib.rc('font', **font)
+import numpy as np
+import sys
+sys.path.append('/home/yann/work/python_library/')
+from my_graph import adjust_spines
+plt.figure(figsize=(7.7*0.4, 5*0.4))
+plt.subplots_adjust(bottom=.29, left=.21)
+ax = plt.subplot(111)
+plt.hist(np.random.randn(1000), bins=50)
+adjust_spines(ax, ['left', 'bottom'])
+ax.set_xlabel('x (units)')
+ax.set_ylabel('y (units)')
+# plt.show()
+plt.savefig('fig.pdf', format='pdf')
+#+end_src
+#+RESULTS:
+: None
+
+
+*** generating a second figure :noexport:
+
+#+begin_src python
+import matplotlib
+font = {'size'   : 10}
+matplotlib.rc('font', **font)
+import matplotlib.pylab as plt
+import numpy as np
+import sys
+sys.path.append('/home/yann/work/python_library/')
+from my_graph import adjust_spines
+plt.figure(figsize=(17*0.4,4*0.4))
+plt.subplots_adjust(left=.1, bottom=.26, right=.98, top=.95)
+ax = plt.subplot(131)
+plt.hist(np.exp(np.random.randn(100)), bins=50)
+adjust_spines(ax, ['left', 'bottom'])
+plt.xlabel('x (units)')
+plt.ylabel('y (units)')
+ax = plt.subplot(132)
+plt.hist(np.exp(np.random.rand(100)), bins=50)
+adjust_spines(ax, ['left', 'bottom'])
+plt.xlabel('x (units)')
+plt.ylabel('y (units)')
+ax = plt.subplot(133)
+plt.hist(np.random.randn(100), bins=50)
+adjust_spines(ax, ['left', 'bottom'])
+plt.xlabel('x (units)')
+plt.ylabel('y (units)')
+# plt.show()
+plt.savefig('sfig.pdf', format='pdf')
+#+end_src
+#+RESULTS:
+: None
+
+
+*** More interesting stuff
+
+Same text than in abstract, but we cite \cite{Kuhn2004} and
+\cite{Brunel2001a}
+
+\blindtext[0]
+
+
+* Discussion
+
+*** sum up
+
+\blindtext[4]
+
+
+
+*** perspectives
+
+\blindtext[5]
+
+
+* References
+\bibliography{biblio/library}
+* Preamble (options for LaTeX formatting) :noexport:
+
+#+LATEX_CLASS: report
+#+LaTeX_CLASS_OPTIONS: [9pt,a4paper,twoside,twocolumn,colorlinks]
+#+LaTeX_HEADER:\usepackage{graphicx}
+# #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
+#+LaTeX_HEADER:\usepackage[T1]{fontenc}
+#+LaTeX_HEADER:\usepackage[english]{babel}
+#+LaTeX_HEADER:\usepackage{lmodern}
+#+LaTeX_HEADER:\usepackage{amssymb,mathenv,array}
+#+LaTeX_HEADER:\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+#+LaTeX_HEADER: \usepackage[labelfont=bf]{caption}
+#+LaTeX_HEADER: \usepackage{geometry}
+#+LaTeX_HEADER: \geometry{a4paper,total={210mm,297mm}, left=20mm, right=20mm, top=20mm, bottom=20mm, bindingoffset=0mm, columnsep=.8cm}
+#+LaTeX_HEADER: \renewcommand{\thesection}{\thepart.\arabic{section}}
+#+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
+#+LaTeX_HEADER: \usepackage{filecontents}
+#+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
+#+LaTeX_HEADER: \usepackage{natbib}
+#+LaTeX_HEADER: \bibliographystyle{apalike}
+
+
+** Blind Text for this example
+#+LaTeX_HEADER: \usepackage{blindtext} 
+
+
