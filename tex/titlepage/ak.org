@@ -1,0 +1,28 @@
+* Aknowledgments
+
+*** Remerciements
+
+-- btsz : bénéficier de sa patience et sa sagesse ont été de
+précieux atouts
+
+\newpage
+
+
+*** Résumé
+
+Quelque chose en français avec tous les accents possibles : é, è , ê 
+\blindtext[5]
+
+\newpage
+
+
+*** Abstract
+
+\blindtext[5]
+
+\newpage
+
+\twocolumn
+
+
+
