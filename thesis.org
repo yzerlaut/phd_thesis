@@ -4,11 +4,11 @@
 
 * Introduction
 
-[[cite:Kuhn2004]]
+[[citep:Kuhn2004]]
 
 \blindtext[0]
 
-[[citetext:Kuhn2004]]
+[[citet:Kuhn2004]]
 
 \blindtext[8]
 
@@ -178,6 +178,8 @@ Same text than in abstract, but we cite \cite{Kuhn2004} and
 
 * References
 \bibliography{biblio/library}
+
+
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
