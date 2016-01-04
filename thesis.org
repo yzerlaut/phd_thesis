@@ -2,23 +2,51 @@
 #+AUTHOR: Yann Zerlaut
 #+DATE: March 2016
 
-* Abstracts :noexport:
+* Abstracts 
+# \onecolumn
 ** Résumé
+
+   Dans cette partie, nous introduisons l'objet de cette thèse:
+   comment est-ce que les méchanismes cellulaires et les propriétés de
+   connectivité façonnent la dynamique de population de réseaux
+   neuronaux dans le néocortex. Nous començons donc par une brêve
+   introduction à la physiologie néocorticale
+
+
+\newpage
 
 ** Summary
 
-** Outline
+In this thesis, we explore a /bottom-up/ approach to understand
+spontaneous population dynamics and evoked responses in
+neocortex. Starting from cellular and circuit properties (determined
+experimentally), we build a model describing population activity at
+the network level. Ultimately, we compare the model behavior with
+experimental data to assess the explanatory power of the model. By
+doing so we quantify whether, and how much, the emergent properties at
+the macroscopic level result from the considered microscopic
+interactions.
+
+In particular, we focused on neocortical computation during the
+asynchronous state of cortical networks
+
+\newpage
+
+# \twocolumn
 
 * Introduction
 
-** Résumé :noexport:
+** Résumé 							   :noexport:
 
-# #+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
+#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
 
-Dans cette partie, nous introduisons l'objet de cette thèse: comment
-est-ce que les méchanismes cellulaires et les propriétés de
-connectivité façonnent la dynamique de population de réseaux
-neuronaux dans le néocortex. Nous començons donc par 
+   Dans cette partie, nous introduisons l'objet de cette thèse:
+   comment est-ce que les méchanismes cellulaires et les propriétés de
+   connectivité façonnent la dynamique de population de réseaux
+   neuronaux dans le néocortex. Nous començons donc par une brêve
+   introduction à la physiologie néocorticale
+
+   \newpage
 
 ** Neocortical physiology
 
@@ -33,13 +61,13 @@ neuronaux dans le néocortex. Nous començons donc par
 *** Generalities
 
  The neocortex is a brain structure appearing with the evolution of
- mammals. It is the structure where the most complex cerebral
- functions (sensory perception, language, generation of motor
- commands, etc...) are performed. One can guess its functional
- importance in humans by realizing how energetically /expensive/ is
- this relatively tiny piece of tissue: while being only \sim 2% of the
- body mass, it represents respectively \sim 25 % and \sim 20% of the
- glucose and dioxygen consumption.
+ *mammals*. It is the structure where the most complex cerebral
+ functions are performed (sensory perception, language, generation of
+ motor commands, etc...). One can guess its functional importance in
+ humans by realizing how energetically /expensive/ is this relatively
+ tiny piece of tissue: while being only 2% of the body mass, it
+ represents 25 % and 20% of the glucose and dioxygen consumption
+ respectively.
 
  The neocortex, (Latin for /new bark/) is the superficial sheet, the
  top \sim 1mm in humans, of the *cerebral cortex*, the latter being
@@ -96,7 +124,7 @@ matter (see Figure [[fig:laminar-structure]]), we can distinguish:
   cortical computations. It also contains few neurons that, in the
   adult brain, seem to be only GABAergic interneurons.
 
-- *Layer II/III*: the external granular layer. It contains small pyramidal
+- *Layer II*: the external granular layer. It contains small pyramidal
   neurons (the apical arbors are moderately develloped because of the
   proximity to the pial surface) and numerous stellate neurons. They
   receive input from the layer IV excitatory neurons and have a strong
@@ -136,8 +164,8 @@ matter (see Figure [[fig:laminar-structure]]), we can distinguish:
 
 - *Layer IV*: the internal granular layer. It contains different types
   of stellate and pyramidal neurons, and is the main target of
-  thalamocortical afferents from thalamus type Cneurons[6] as well as
-  intra-hemispheric corticocortical afferents.
+  thalamocortical afferents as well as intra-hemispheric
+  corticocortical afferents.
 
 - *Layer V*: the internal pyramidal layer. It contains large pyramidal
   neurons which give rise to axons leaving the cortex and running down
@@ -170,10 +198,14 @@ while that in layer V having a fast 10–15 Hz one.[12]
 #+CAPTION: Laminar structure of the neocortex
 [[file:./figures/laminar_cell_compo.jpg]]
 
-In section [[sec:layerV-firing-charact]], we investigate the firing
-properties of the layer V pyramidal neurons. In section
+\bfseries
+
+_Contribution :_ In section [[sec:layerV-firing-charact]], we investigate
+the firing properties of the layer V pyramidal neurons. In section
 [[sec:propag-wave]], we build up a model of the layer II/III recurrent
 network stimulated by its input from layer IV.
+
+\normalfont
 
 **** TODO update laminar structure
 
@@ -181,7 +213,6 @@ network stimulated by its input from layer IV.
 - find a nice figure for the laminar organisation (highlight on circuitry !)
 - check [[url:http://www.nature.com/neuro/journal/v18/n2/pdf/nn.3917.pdf]]
 - current fig [[url:http://dev.biologists.org/content/139/9/1535]]
-
 
 *** Neurons in neocortex
 
@@ -236,11 +267,7 @@ In section [[sec:layerV-firing-charact]], we investigate the cellular
 heterogeneity within one /standard/ cell class: the layer V pyramidal
 neurons in the primary visual cortex of juvenile mice.
 
-*** Synaptic transmission
-
-synapses
-
-*** Neuronal networks 
+*** Synaptic transmission and neocortical networks 
 
 sdjhfksjhdf
 
@@ -269,7 +296,7 @@ representation of stimuli and allow
 Because the experimentalist can control variables from
 the
 
-*** Organizing principles : anatomy
+*** Organizing principles of primary sensory systems
 
 Though all sensory systems in mammalians (visual, auditory, olfactory
 and somato-sensory) have their unique features, a common organizing
@@ -287,29 +314,88 @@ kjsfs
 
 *** What do we know about encoding strategies of sensory information in the mammalian CNS ?
 
-Basically, very few. Following the argument revewed in
-[[citet:Brette2015]], the experimental work on information processing of
+Basically, very few. Following the argument reviewed in
+[[citet:Brette2015b]], the experimental work on information processing of
 sensory input has mostly focused on finding /neural correlates/ of
-sensory processing,
+sensory processing, not /causal/ relationships. The
 
-*** Scope of the study: biophysical constraints to population rate dynamics in neocortical networks
+*** Scope of the study: population rate dynamics in neocortical networks
 
 - Receptive field in sensory systems: stimulus presentation correlates
   with increase of population activity
 
-*** Contribution: investigating the cellular and circuit mechanims constraining population rate dynamics in neocortical networks
+** A theoretical framework to study asynchronous population dynamics in neocortex
 
-** A theoretical framework to describe neocortical population dynamics
+The strategy explored in this thesis is a /bottom-up/ approach:
+starting from cellular and circuit properties, we aim at building a
+model describing population activity at the network level, and,
+ultimately, compare the model predictions to experimental data. 
 
-*** Modeling asychronous irregular dynamics
+Thus, we need a theoretical framework that constructs a dynamical
+system for the population activity given some cellular and circuit
+properties. [[remove mean-field: building neural mass, then mean field
+is just the auto-consistent solution]] The so-called /mean field/
+approach provides such a procedure: it enables to derive models of
+population activity in recurrent networks. The term /mean-field/
+originally comes from an analogy with statistical physics: the
+magnetization of a spin glass (the /mean/ magnetic /field/) that
+results from the sum of the neighbour-to-neighbour spin
+interactions. In this system, a self-consistency relation allows to
+find the value of the macroscopic magnetization (in particular, the
+bifurcation to a non-zero magnetization state). Such self-consistency
+relations, now in terms of firing probability, have been used in
+theoretical studies to describe the dynamics of recurrent neural
+networks [[citep:Treves1993, Amit1997, Brunel1999, Hertz2004]]. The term
+/mean-field/ now evolved to be equivalent /neural mass/, [[so useless
+discussion of mean field]]
 
-El Boustani & Destexhe, 2009
+In this thesis, we will use a versatile framework for the description
+of the population dynamics [[citep:ElBoustani2009]]. In this part, we
+start by describing this framework, we illustrate its [[accuracy]] on the
+dynamics of a numerical neural network and we discuss how this
+framework can easily integrate more complex biophysical and circuit
+properties.
+
+
+*** A markovian description of asychronous irregular dynamics
+<<sec:master-eq>>
+
+We quickly expose the ideas presented in [[citet:ElBoustani2009]] and
+derive the equations that describe the temporal evolution of the
+temporal dynamics of a neural network.
+
+We start by outlining the hypothesis of the description:
+
+- 1) the network dynamics is *memoryless* beyond a certain time scale
+  $T$. This is somehow the definition of the stochastic asynchronous
+  state. In Figure [[fig:XX]] we show a typical autocorrelation time of
+  the network dynamics, it is about 5ms. This hypothesis will allow a
+  *Markovian description* of the system with a time step $T$.
+
+- 2) each neuron is describe by its */stationary/ transfer function*
+  $\mathcal{F}$, where \( \nu_\mathrm{out} = \mathcal{F}( \{
+  \nu_\gamma\} ) \), i.e. the function that gives the stationary
+  output firing rate \nu_{out} given a set of presynaptic rates
+  {\nu_\gamma}, where \gamma indexes the different synapses.
+
+- 3) the system allows a *continuous description* of time and firing
+  rates. Markovian descriptions usually corresponds to discrete
+  schemes
+
+- 
 
 **** TODO investigate what is the output when you have the transfer function !
 
-- redo the numerical simulations of networks
++ redo the numerical simulations of networks
 
-- redo the analysis
++ redo the analysis
+
+*** The sparse recurrent balanced network as a canonical model 
+
+Contribution: investigating the cellular and circuit mechanims
+constraining population rate dynamics in neocortical networks
+
+The balanced network as a canonical model
 
 *** The core of the description: the neuronal /transfer function/
 
@@ -358,7 +444,7 @@ characterization is able to predict the response to noisy input.
 - network RS/FS
 
 - network with extended dendritic structures
-
+  
 * Single cell computation in the asynchronous state of cortical networks
   
 ** French summary 						   :noexport:
@@ -370,7 +456,7 @@ characterization is able to predict the response to noisy input.
 
 *** _Work 1_: Heterogeneous firing response of mice pyramidal neurons in the fluctuation-driven regime
 
-** Heterogeneous firing response induce specific coupling to presynaptic activity properties
+** Heterogeneous firing response induce diverse coupling to different type of presynaptic activities
 
 *** Dendritic integration of synaptic input in the fluctuation-driven regime
 
@@ -418,7 +504,7 @@ In this thesis,
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
-#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft]
+#+LaTeX_CLASS_OPTIONS: [twoside, twocolumn, colorlinks, draft]
 # #+OPTIONS: num: 3
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
@@ -434,8 +520,10 @@ In this thesis,
 # #+LaTeX_HEADER: \usepackage{filecontents}
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
 #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
-# #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
-# #+LaTeX_HEADER: \renewcommand{\thechapter}{\thepart.\arabic{chapter}}
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
 #+LaTeX_HEADER: \usepackage{pdfpages}
+#+LaTeX_HEADER: \usepackage{titlesec}
+#+LaTeX_HEADER: \titleformat{\chapter}{\bfseries\Huge}{\thechapter}{20pt}{\Huge\bfseries}
+#+LaTeX_HEADER: \renewcommand{\thechapter}{\Roman{chapter}}
+#+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
