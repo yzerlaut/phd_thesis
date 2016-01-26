@@ -361,20 +361,28 @@ characterization is able to predict the response to noisy input.
 
 * Single cell computation in the asynchronous state of cortical networks
   
-** French summary 						   :noexport:
-
-#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
-
 ** Characterizing the firing rate response of neocortical neurons 
 <<sec:layerV-firing-charact>>
 
+*** French summary 						   :noexport:
+
+#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
+
 *** _Work 1_: Heterogeneous firing response of mice pyramidal neurons in the fluctuation-driven regime
+
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
 ** Heterogeneous firing response induce specific coupling to presynaptic activity properties
 
-*** Dendritic integration of synaptic input in the fluctuation-driven regime
+*** French summary 						   :noexport:
 
-** Gain modulation from background synaptic input
+#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
+
+*** _Work 2_: Dendritic integration of synaptic input in the fluctuation-driven regime
+
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
+
+** Gain modulation from background synaptic input 
 
 In this section, we revisit a classical result of single-cell
 computation in the light of our framework including dendritic
@@ -395,7 +403,7 @@ sensory stimuli. By comparing the response in absence of ongoing
 activity (Down-state), we were able to identify the facilitation of
 due to the ongoing activity (depolarizing cells )
 
-#+LATEX: \includepdf[pages={1-},scale=0.99]{figures/Gain2014.pdf}
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
 ** Multi-input integration
 <<sec:propag-wave>>
@@ -418,7 +426,7 @@ In this thesis,
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
-#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft]
+#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks]
 # #+OPTIONS: num: 3
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
