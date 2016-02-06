@@ -382,11 +382,6 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
-** Gain modulation from background synaptic input 
-
-In this section, we revisit a classical result of single-cell
-computation in the light of our framework including dendritic
-integration and .
 
 * Circuit-mediated components of neocortical processing
 
@@ -418,6 +413,16 @@ In this thesis,
 
 ** Heterogeneity in neocortex
 
+** Gain modulation from background synaptic input 
+
+In this section, we revisit a classical result of single-cell
+computation in the light of our framework including dendritic
+integration and .
+
+** On the use of an analytical model of dendritic computation
+
+self-sustained activity ?
+
 \newpage
 
 * References
@@ -426,7 +431,7 @@ In this thesis,
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
-#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks]
+#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft]
 # #+OPTIONS: num: 3
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
