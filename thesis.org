@@ -2,12 +2,9 @@
 #+AUTHOR: Yann Zerlaut
 #+DATE: March 2016
 
-* Abstracts :noexport:
 ** Résumé
 
 ** Summary
-
-** Outline
 
 * Introduction
 
@@ -361,26 +358,27 @@ characterization is able to predict the response to noisy input.
 
 * Single cell computation in the asynchronous state of cortical networks
   
-** Characterizing the firing rate response of neocortical neurons 
+** _Work 1_: Characterizing the firing rate response of neocortical neurons 
 <<sec:layerV-firing-charact>>
 
-*** French summary 						   :noexport:
+*** French summary
 
-#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
-
-*** _Work 1_: Heterogeneous firing response of mice pyramidal neurons in the fluctuation-driven regime
+*** Summary
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
-** Heterogeneous firing response induce specific coupling to presynaptic activity properties
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Heterogenous_Firing_Response.pdf}
 
-*** French summary 						   :noexport:
+** _Work 2_: Heterogeneous firing response induce specific coupling to presynaptic activity properties
 
-#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
+*** French summary
 
-*** _Work 2_: Dendritic integration of synaptic input in the fluctuation-driven regime
+*** Summary
 
+*** Article
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
+
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
 * Circuit-mediated components of neocortical processing
 
@@ -424,14 +422,13 @@ self-sustained activity ?
 
 \newpage
 
-* References
-\bibliography{biblio/library}
+\bibliography{tex/biblio}
 
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
+# #+OPTIONS: num: 3
 #+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft]
-#+OPTIONS: num: 3
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
 #+LaTeX_HEADER:\usepackage[T1]{fontenc}
@@ -443,11 +440,13 @@ self-sustained activity ?
 # #+LaTeX_HEADER: \usepackage{geometry}
 # #+LaTeX_HEADER: \geometry{a4paper,total={210mm,297mm}, left=20mm, right=20mm, top=20mm, bottom=20mm, bindingoffset=0mm, columnsep=.8cm}
 #+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
-# #+LaTeX_HEADER: \usepackage{filecontents}
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
 #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
+#+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
 # #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
-# #+LaTeX_HEADER: \renewcommand{\thechapter}{\thepart.\arabic{chapter}}
+#+LaTeX_HEADER: \renewcommand{\thechapter}{\Roman{chapter}}
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
 #+LaTeX_HEADER: \usepackage{pdfpages}
+#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter.\, #1\par\nobreak    \vskip 30\p@  }} \makeatother
+#+LaTeX_HEADER: \usepackage[nottoc,numbib]{tocbibind}
