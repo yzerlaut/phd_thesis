@@ -1,4 +1,4 @@
-#+TITLE: Cellular and circuit mechanisms underlying population dynamics in neocortical networks
+#+TITLE: Modeling population dynamics in neocortical networks: a bottom-up approach
 #+AUTHOR: Yann Zerlaut
 #+DATE: March 2016
 
@@ -382,7 +382,6 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
-
 * Circuit-mediated components of neocortical processing
 
 ** French summary 						   :noexport:
@@ -432,7 +431,7 @@ self-sustained activity ?
 
 #+LATEX_CLASS: report
 #+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft]
-# #+OPTIONS: num: 3
+#+OPTIONS: num: 3
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
 #+LaTeX_HEADER:\usepackage[T1]{fontenc}
