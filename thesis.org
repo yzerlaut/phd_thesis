@@ -392,7 +392,7 @@ due to the ongoing activity (depolarizing cells )
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
-** _Work 4_: Dynamics of input normalization in a /mean-field/ model of the cortical sheet
+** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and of the cortical sheet
 
 *** French summary
 
