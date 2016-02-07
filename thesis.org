@@ -1,21 +1,18 @@
 #+TITLE: Modeling population dynamics in neocortical networks: a bottom-up approach
 #+AUTHOR: Yann Zerlaut
-#+DATE: March 2016
+#+DATE: PhD Thesis
 
 ** Résumé
+
+Dans cette partie, nous introduisons l'objet de cette thèse: comment
+est-ce que les méchanismes cellulaires et les propriétés de
+connectivité façonnent la dynamique de population de réseaux neuronaux
+dans le néocortex. Nous commençons donc par présenter les concepts
+physiologiques
 
 ** Summary
 
 * Introduction
-
-** Résumé :noexport:
-
-# #+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
-
-Dans cette partie, nous introduisons l'objet de cette thèse: comment
-est-ce que les méchanismes cellulaires et les propriétés de
-connectivité façonnent la dynamique de population de réseaux
-neuronaux dans le néocortex. Nous començons donc par 
 
 ** Neocortical physiology
 
@@ -363,7 +360,7 @@ characterization is able to predict the response to noisy input.
 
 *** French summary
 
-*** Summary
+*** Article
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
@@ -373,8 +370,6 @@ characterization is able to predict the response to noisy input.
 
 *** French summary
 
-*** Summary
-
 *** Article
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
@@ -382,12 +377,10 @@ characterization is able to predict the response to noisy input.
 
 * Circuit-mediated components of neocortical processing
 
-** French summary 						   :noexport:
+** _Work 3_: Scaling of post-synaptic response by recurrent network activity
+<<sec:layerV-firing-charact>>
 
-#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
-
-** Scaling of post-synaptic response by recurrent network activity
-<<sec:ntwk-state-modul-PSP>>
+*** French summary
 
 In this work, we investigated how the ongoing neocortical dynamics
 associated to the Up-state could affect the post-synaptic response to
@@ -395,12 +388,19 @@ sensory stimuli. By comparing the response in absence of ongoing
 activity (Down-state), we were able to identify the facilitation of
 due to the ongoing activity (depolarizing cells )
 
+*** Article
+
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
-** Multi-input integration
-<<sec:propag-wave>>
+** _Work 4_: Dynamics of input normalization in a /mean-field/ model of the cortical sheet
+
+*** French summary
+
+*** Article
 
 - collab. Chavanne team
+
+- Multi-input integration -> origin of strong suppression
 
 - "normalization"
 
@@ -408,15 +408,33 @@ due to the ongoing activity (depolarizing cells )
 
 In this thesis, 
 
-** Heterogeneity in neocortex
+*** Heterogeneity in neocortex and its functional impact
 
-** Gain modulation from background synaptic input 
+- Does this heterogeneity remains in more mature animals ?
+
+- Mejias and Longtin
+
+*** Modulation of sensory response by network state
+
+We identified an important principle, the final effect for the
+modulation result from the competition between:
+
+- cellular gain modulation [[cite:Ho2000,Chance2002]]. This mechanism is
+  in favor of the quiescent-state.
+
+- recruitment within the network to amplify the stimulus through the
+  recurrent connectivity. This mechanism is in favor of the active-state.
+
+
+Requires great care about what is actually measured. Somatic intracellular do not
+
+*** Gain modulation from background synaptic input 
 
 In this section, we revisit a classical result of single-cell
 computation in the light of our framework including dendritic
 integration and .
 
-** On the use of an analytical model of dendritic computation
+*** On the use of an analytical model of dendritic computation
 
 self-sustained activity ?
 
@@ -442,11 +460,13 @@ self-sustained activity ?
 #+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
 #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
+#+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
 #+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
 # #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
+#+LaTeX_HEADER: \renewcommand{\thesection}{\arabic{section}}
 #+LaTeX_HEADER: \renewcommand{\thechapter}{\Roman{chapter}}
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
 #+LaTeX_HEADER: \usepackage{pdfpages}
-#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter.\, #1\par\nobreak    \vskip 30\p@  }} \makeatother
+#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
 #+LaTeX_HEADER: \usepackage[nottoc,numbib]{tocbibind}
