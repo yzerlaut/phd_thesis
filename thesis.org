@@ -3,14 +3,14 @@
 #+DATE: PhD Thesis
 
 ** Résumé
-
-Dans cette partie, nous introduisons l'objet de cette thèse: comment
-est-ce que les méchanismes cellulaires et les propriétés de
-connectivité façonnent la dynamique de population de réseaux neuronaux
-dans le néocortex. Nous commençons donc par présenter les concepts
-physiologiques
-
 ** Summary
+
+This thesis devellops a modeling procedure to design theoretical
+descriptions of population activity in cortical networks. The
+procedure rely on a /bottom-up/ approach: it measures quantities at a
+microscopic scale (the cellular scale, \sim 10-100 \(\mu\mathrm{m}\))
+to predict the behavior on a macroscopic scale (from cortical columns
+to cortical areas, \sim 1-10 mm).
 
 * Introduction
 
@@ -279,19 +279,23 @@ in turn projects to the primary sensory area.
 
 kjsfs
 
-*** What do we know about encoding strategies of sensory information in the mammalian CNS ?
+*** Scope of the study: population rate dynamics in neocortical networks
+
+What do we know about encoding strategies of sensory information in
+the mammalian CNS ?
 
 Basically, very few. Following the argument revewed in
 [[citet:Brette2015]], the experimental work on information processing of
 sensory input has mostly focused on finding /neural correlates/ of
 sensory processing,
 
-*** Scope of the study: biophysical constraints to population rate dynamics in neocortical networks
-
 - Receptive field in sensory systems: stimulus presentation correlates
   with increase of population activity
 
-*** Contribution: investigating the cellular and circuit mechanims constraining population rate dynamics in neocortical networks
+In the remaining of this thesis we will adopt a conservative view: we 
+
+*_Contribution_*: investigating the cellular and circuit mechanims
+constraining population rate dynamics in neocortical networks
 
 ** A theoretical framework to describe neocortical population dynamics
 
@@ -375,7 +379,7 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
-* Circuit-mediated components of neocortical processing
+* Network dynamics in cortical  Circuit-mediated components of neocortical processing
 
 ** _Work 3_: Scaling of post-synaptic response by recurrent network activity
 <<sec:layerV-firing-charact>>
@@ -392,10 +396,9 @@ due to the ongoing activity (depolarizing cells )
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
-** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and of the cortical sheet
+** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
 
 *** French summary
-
 *** Article
 
 - collab. Chavanne team
@@ -414,6 +417,10 @@ In this thesis,
 
 - Mejias and Longtin
 
+- plugin in this electrophysiological heterogeneity in a recurrent
+  model very naturally reproduces one of the key features of
+  population rate activity: the 
+
 *** Modulation of sensory response by network state
 
 We identified an important principle, the final effect for the
@@ -428,13 +435,28 @@ modulation result from the competition between:
 
 Requires great care about what is actually measured. Somatic intracellular do not
 
+*** Biophysical and circuit mechanisms underlying cortical normalization
+
+intracortical mechanism because apparent when stimuli are not
+overlapping in the thalamus.
+
+also the very strong suppression observed for high inputs are unlikely
+to be of inhibitory origin.
+
+cortical inhibition shapes the gain of the input-output relation but
+is unlikely to give rise to strong saturations because it does not
+have an autonomous dynamics, it just follows excitation
+
+ not likely to bedur
+
 *** Gain modulation from background synaptic input 
 
-In this section, we revisit a classical result of single-cell
-computation in the light of our framework including dendritic
-integration and .
+In this section, in the light of our framework including dendritic
+integration and , we discuss the classical result of single-cell
+computation: gain modulation from background synaptic input
+[[cite:PChance2002]].
 
-*** On the use of an analytical model of dendritic computation
+*** On the need of an analytical model for dendritic integration
 
 self-sustained activity ?
 
