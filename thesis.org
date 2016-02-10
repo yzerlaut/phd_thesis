@@ -411,6 +411,40 @@ due to the ongoing activity (depolarizing cells )
 
 In this thesis, 
 
+*** Rationale behind a /bottom-up/ approach: models of _high empirical content_
+
+At this stage, it is worth comparing the theoretical model resulting
+from our /bottom-up/ approach to other models in the litterature. We
+will put this comparison in perspective with some epistemological
+considerations (analogous to [[citetext:Brette2015a]]).
+
+Competing models for macroscopic population dynamics are
+phenomenological models, the most prominent example being the model of
+[[citetext:Rubin2013]] for primary visual cortex. This model has only two
+variables
+
+The number of parameters
+
+--> from Brette paper
+
+Therefore,we must carefullydistinguishbetween stories
+(“gatingvariables”) andactualscientific content—that is,
+thearticulationof themodel with reality. Theaddedvalueof detailed
+modelscan becomprehended inamore satisfying wayusing theconcept of
+empirical content described byphilosopherof science
+KarlPopper [13].Theempiricalcontent ofatheory isthe
+setofpossiblefalsifiers of thetheory. Inshort, for amodel,it isthetype
+ofpredictionsthat a model canmake, which canbe falsified.
+
+
+
+
+
+
+We argue here that the prese
+
+The present modeling procedure resul
+
 *** Heterogeneity in neocortex and its functional impact
 
 - Does this heterogeneity remains in more mature animals ?
@@ -421,7 +455,7 @@ In this thesis,
   model very naturally reproduces one of the key features of
   population rate activity: the 
 
-*** Modulation of sensory response by network state
+*** Modulation of sensory responses by network state
 
 We identified an important principle, the final effect for the
 modulation result from the competition between:
