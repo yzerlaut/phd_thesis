@@ -5,14 +5,14 @@
 ** Résumé
 ** Summary
 
-This thesis devellops a modeling procedure to design theoretical
+This thesis devellops a modeling procedure to obtain theoretical
 descriptions of population activity in cortical networks. The
 procedure rely on a /bottom-up/ approach: it measures quantities at a
 microscopic scale (the cellular scale, \sim 10-100 \(\mu\mathrm{m}\))
 to predict the behavior on a macroscopic scale (from cortical columns
 to cortical areas, \sim 1-10 mm).
 
-* Introduction
+* Introduction \\ Neocortical physiology
 
 ** Neocortical physiology
 
@@ -285,7 +285,7 @@ What do we know about encoding strategies of sensory information in
 the mammalian CNS ?
 
 Basically, very few. Following the argument revewed in
-[[citet:Brette2015]], the experimental work on information processing of
+[[citet:Brette2015b]], the experimental work on information processing of
 sensory input has mostly focused on finding /neural correlates/ of
 sensory processing,
 
@@ -411,19 +411,30 @@ due to the ongoing activity (depolarizing cells )
 
 In this thesis, 
 
-*** Rationale behind a /bottom-up/ approach: models of _high empirical content_
+*** Rationale behind a /bottom-up/ approach: models of high empirical content
 
 At this stage, it is worth comparing the theoretical model resulting
-from our /bottom-up/ approach to other models in the litterature. We
-will put this comparison in perspective with some epistemological
-considerations (analogous to [[citetext:Brette2015a]]).
+from our /bottom-up/ approach to other models in the litterature.
 
 Competing models for macroscopic population dynamics are
 phenomenological models, the most prominent example being the model of
-[[citetext:Rubin2013]] for primary visual cortex. This model has only two
-variables
+[[citetext:Rubin2013]] for primary visual cortex computation. We will
+focus on this model within this discussion. This model has only two
+variables: the excitatory and inhibitory population activities
+(comparable to our two population model). It has also very few
+parameters: the 3 parameters of their /power law/ input-output
+function and the connectivity parameters. This very low number of
+parameters might be seen  as a 
 
-The number of parameters
+The number of parameters is obvisouly a lot larger (ionic channel
+parameters, synaptic quantities, membrane quantities, morphology
+parameters, circuit properties, ...)
+
+
+We now examine this comparison in the light of an epistemological
+consideration: the distinction between /empirical content/ and
+/empirical accuracy/ (adapted from [[citetext:Brette2015a]], where it was
+discussed for models of spike initiation). The empirical accuracy
 
 --> from Brette paper
 
@@ -488,7 +499,7 @@ have an autonomous dynamics, it just follows excitation
 In this section, in the light of our framework including dendritic
 integration and , we discuss the classical result of single-cell
 computation: gain modulation from background synaptic input
-[[cite:PChance2002]].
+[[cite:Chance2002]].
 
 *** On the need of an analytical model for dendritic integration
 
@@ -519,7 +530,7 @@ self-sustained activity ?
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
 #+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
 # #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
-#+LaTeX_HEADER: \renewcommand{\thesection}{\arabic{section}}
+#+LaTeX_HEADER: \renewcommand{\thesection}{\roman{section}}
 #+LaTeX_HEADER: \renewcommand{\thechapter}{\Roman{chapter}}
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
