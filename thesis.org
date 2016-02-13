@@ -1,21 +1,18 @@
 #+TITLE: Modeling population dynamics in neocortical networks: a bottom-up approach
 #+AUTHOR: Yann Zerlaut
-#+DATE: March 2016
+#+DATE: PhD Thesis
 
 ** Résumé
-
 ** Summary
 
-* Introduction
+This thesis devellops a modeling procedure to obtain theoretical
+descriptions of population activity in cortical networks. The
+procedure rely on a /bottom-up/ approach: it measures quantities at a
+microscopic scale (the cellular scale, \sim 10-100 \(\mu\mathrm{m}\))
+to predict the behavior on a macroscopic scale (from cortical columns
+to cortical areas, \sim 1-10 mm).
 
-** Résumé :noexport:
-
-# #+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
-
-Dans cette partie, nous introduisons l'objet de cette thèse: comment
-est-ce que les méchanismes cellulaires et les propriétés de
-connectivité façonnent la dynamique de population de réseaux
-neuronaux dans le néocortex. Nous començons donc par 
+* Introduction \\ Neocortical physiology
 
 ** Neocortical physiology
 
@@ -282,19 +279,23 @@ in turn projects to the primary sensory area.
 
 kjsfs
 
-*** What do we know about encoding strategies of sensory information in the mammalian CNS ?
+*** Scope of the study: population rate dynamics in neocortical networks
+
+What do we know about encoding strategies of sensory information in
+the mammalian CNS ?
 
 Basically, very few. Following the argument revewed in
-[[citet:Brette2015]], the experimental work on information processing of
+[[citet:Brette2015b]], the experimental work on information processing of
 sensory input has mostly focused on finding /neural correlates/ of
 sensory processing,
-
-*** Scope of the study: biophysical constraints to population rate dynamics in neocortical networks
 
 - Receptive field in sensory systems: stimulus presentation correlates
   with increase of population activity
 
-*** Contribution: investigating the cellular and circuit mechanims constraining population rate dynamics in neocortical networks
+In the remaining of this thesis we will adopt a conservative view: we 
+
+*_Contribution_*: investigating the cellular and circuit mechanims
+constraining population rate dynamics in neocortical networks
 
 ** A theoretical framework to describe neocortical population dynamics
 
@@ -363,7 +364,7 @@ characterization is able to predict the response to noisy input.
 
 *** French summary
 
-*** Summary
+*** Article
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
@@ -373,21 +374,17 @@ characterization is able to predict the response to noisy input.
 
 *** French summary
 
-*** Summary
-
 *** Article
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
-* Circuit-mediated components of neocortical processing
+* Network dynamics in cortical  Circuit-mediated components of neocortical processing
 
-** French summary 						   :noexport:
+** _Work 3_: Scaling of post-synaptic response by recurrent network activity
+<<sec:layerV-firing-charact>>
 
-#+LATEX: {\huge \textbf{Résumé} \vspace{1cm}}
-
-** Scaling of post-synaptic response by recurrent network activity
-<<sec:ntwk-state-modul-PSP>>
+*** French summary
 
 In this work, we investigated how the ongoing neocortical dynamics
 associated to the Up-state could affect the post-synaptic response to
@@ -395,12 +392,18 @@ sensory stimuli. By comparing the response in absence of ongoing
 activity (Down-state), we were able to identify the facilitation of
 due to the ongoing activity (depolarizing cells )
 
+*** Article
+
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
-** Multi-input integration
-<<sec:propag-wave>>
+** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
+
+*** French summary
+*** Article
 
 - collab. Chavanne team
+
+- Multi-input integration -> origin of strong suppression
 
 - "normalization"
 
@@ -408,15 +411,97 @@ due to the ongoing activity (depolarizing cells )
 
 In this thesis, 
 
-** Heterogeneity in neocortex
+*** Rationale behind a /bottom-up/ approach: models of high empirical content
 
-** Gain modulation from background synaptic input 
+At this stage, it is worth comparing the theoretical model resulting
+from our /bottom-up/ approach to other models in the litterature.
 
-In this section, we revisit a classical result of single-cell
-computation in the light of our framework including dendritic
-integration and .
+Competing models for macroscopic population dynamics are
+phenomenological models, the most prominent example being the model of
+[[citetext:Rubin2013]] for primary visual cortex computation. We will
+focus on this model within this discussion. This model has only two
+variables: the excitatory and inhibitory population activities
+(comparable to our two population model). It has also very few
+parameters: the 3 parameters of their /power law/ input-output
+function and the connectivity parameters. This very low number of
+parameters might be seen  as a 
 
-** On the use of an analytical model of dendritic computation
+The number of parameters is obvisouly a lot larger (ionic channel
+parameters, synaptic quantities, membrane quantities, morphology
+parameters, circuit properties, ...)
+
+
+We now examine this comparison in the light of an epistemological
+consideration: the distinction between /empirical content/ and
+/empirical accuracy/ (adapted from [[citetext:Brette2015a]], where it was
+discussed for models of spike initiation). The empirical accuracy
+
+--> from Brette paper
+
+Therefore,we must carefullydistinguishbetween stories
+(“gatingvariables”) andactualscientific content—that is,
+thearticulationof themodel with reality. Theaddedvalueof detailed
+modelscan becomprehended inamore satisfying wayusing theconcept of
+empirical content described byphilosopherof science
+KarlPopper [13].Theempiricalcontent ofatheory isthe
+setofpossiblefalsifiers of thetheory. Inshort, for amodel,it isthetype
+ofpredictionsthat a model canmake, which canbe falsified.
+
+
+
+
+
+
+We argue here that the prese
+
+The present modeling procedure resul
+
+*** Heterogeneity in neocortex and its functional impact
+
+- Does this heterogeneity remains in more mature animals ?
+
+- Mejias and Longtin
+
+- plugin in this electrophysiological heterogeneity in a recurrent
+  model very naturally reproduces one of the key features of
+  population rate activity: the 
+
+*** Modulation of sensory responses by network state
+
+We identified an important principle, the final effect for the
+modulation result from the competition between:
+
+- cellular gain modulation [[cite:Ho2000,Chance2002]]. This mechanism is
+  in favor of the quiescent-state.
+
+- recruitment within the network to amplify the stimulus through the
+  recurrent connectivity. This mechanism is in favor of the active-state.
+
+
+Requires great care about what is actually measured. Somatic intracellular do not
+
+*** Biophysical and circuit mechanisms underlying cortical normalization
+
+intracortical mechanism because apparent when stimuli are not
+overlapping in the thalamus.
+
+also the very strong suppression observed for high inputs are unlikely
+to be of inhibitory origin.
+
+cortical inhibition shapes the gain of the input-output relation but
+is unlikely to give rise to strong saturations because it does not
+have an autonomous dynamics, it just follows excitation
+
+ not likely to bedur
+
+*** Gain modulation from background synaptic input 
+
+In this section, in the light of our framework including dendritic
+integration and , we discuss the classical result of single-cell
+computation: gain modulation from background synaptic input
+[[cite:Chance2002]].
+
+*** On the need of an analytical model for dendritic integration
 
 self-sustained activity ?
 
@@ -442,11 +527,13 @@ self-sustained activity ?
 #+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
 #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
+#+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
 #+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
 # #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
+#+LaTeX_HEADER: \renewcommand{\thesection}{\roman{section}}
 #+LaTeX_HEADER: \renewcommand{\thechapter}{\Roman{chapter}}
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
 #+LaTeX_HEADER: \usepackage{pdfpages}
-#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter.\, #1\par\nobreak    \vskip 30\p@  }} \makeatother
+#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
 #+LaTeX_HEADER: \usepackage[nottoc,numbib]{tocbibind}
