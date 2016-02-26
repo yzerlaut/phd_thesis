@@ -12,7 +12,7 @@ microscopic scale (the cellular scale, \sim 10-100 \(\mu\mathrm{m}\))
 to predict the behavior on a macroscopic scale (from cortical columns
 to cortical areas, \sim 1-10 mm).
 
-* Introduction \\ Neocortical physiology
+* Introduction: Neocortical physiology
 
 ** Neocortical physiology
 
@@ -379,8 +379,7 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
-* Network dynamics in cortical  Circuit-mediated components of neocortical processing
-
+* Population dynamics during sensory processing
 ** _Work 3_: Scaling of post-synaptic response by recurrent network activity
 <<sec:layerV-firing-charact>>
 
