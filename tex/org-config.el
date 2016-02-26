@@ -1,5 +1,5 @@
 (require 'org)
-(defcustom org-latex-default-figure-position "tb!"           "Default position for latex figures."        :group 'org-export-latex                   :type 'string)
+(defcustom org-latex-default-figure-position "b!"           "Default position for latex figures."        :group 'org-export-latex                   :type 'string)
 (setq org-export-latex-hyperref-format "\\ref{%s}")
 
 ;; tools for CITATIONS

@@ -12,19 +12,20 @@ microscopic scale (the cellular scale, \sim 10-100 \(\mu\mathrm{m}\))
 to predict the behavior on a macroscopic scale (from cortical columns
 to cortical areas, \sim 1-10 mm).
 
-* Introduction: Neocortical physiology
-
-** Neocortical physiology
+* Introduction
 
  We introduce here the biological system whose functional properties
  are investigated in this thesis: the mammalian *neocortex*. This part
  is not thought to be an extensive review of the current knowledge
- about this complex brain structure, we simply present the
- physiological concepts that will be used throughout the manuscript
- with an emphasis on the concepts develloped in the results of this
- thesis.
+ about this complex brain structure, we briefly present the
+ physiological concepts on which this study relies. At the end of each
+ section, we emphasize how those concepts relates to the Results of
+ this thesis.
 
-*** Generalities
+*** The central nervous system
+
+
+*** Generalities on neocortical physiology
 
  The neocortex is a brain structure appearing with the evolution of
  mammals. It is the structure where the most complex cerebral
@@ -51,7 +52,7 @@ to cortical areas, \sim 1-10 mm).
 
 #+ATTR_LATEX: width=\linewidth
 #+LABEL: fig:neocortex-anatomy
-#+CAPTION: Organization of the sensory systems in mammalian nervous system
+#+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
 [[file:./figures/neocortical_anatomy.png]]
 
  Neocortical tissue is mainly composed of *neurons* as well as *glial
@@ -176,7 +177,6 @@ network stimulated by its input from layer IV.
 - check [[url:http://www.nature.com/neuro/journal/v18/n2/pdf/nn.3917.pdf]]
 - current fig [[url:http://dev.biologists.org/content/139/9/1535]]
 
-
 *** Neurons in neocortex
 
 As already suggested in the previous section, the neocortex is
@@ -251,7 +251,8 @@ cable theory
 - Up and Down states
 - Asynchronous activity
 
-** Information processing in primary sensory cortices
+
+*** Information processing in primary sensory cortices
 
 Sensory systems are of particular interest for neuroscientists as they
 encode information coming from the physical world, which the
@@ -297,8 +298,7 @@ In the remaining of this thesis we will adopt a conservative view: we
 *_Contribution_*: investigating the cellular and circuit mechanims
 constraining population rate dynamics in neocortical networks
 
-** A theoretical framework to describe neocortical population dynamics
-
+*** A theoretical framework to describe neocortical population dynamics
 *** Modeling asychronous irregular dynamics
 
 El Boustani & Destexhe, 2009
@@ -357,7 +357,7 @@ characterization is able to predict the response to noisy input.
 
 - network with extended dendritic structures
 
-* Single cell computation in the asynchronous state of cortical networks
+* Single cell computation in the asynchronous state of cortical networks :noexport:
   
 ** _Work 1_: Characterizing the firing rate response of neocortical neurons 
 <<sec:layerV-firing-charact>>
@@ -379,7 +379,7 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
-* Population dynamics during sensory processing
+* Population dynamics during sensory processing :noexport:
 ** _Work 3_: Scaling of post-synaptic response by recurrent network activity
 <<sec:layerV-firing-charact>>
 
@@ -512,7 +512,7 @@ self-sustained activity ?
 
 #+LATEX_CLASS: report
 # #+OPTIONS: num: 3
-#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft]
+#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks]
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
 #+LaTeX_HEADER:\usepackage[T1]{fontenc}
