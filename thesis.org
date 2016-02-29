@@ -20,12 +20,38 @@ to cortical areas, \sim 1-10 mm).
  about this complex brain structure, we briefly present the
  physiological concepts on which this study relies. At the end of each
  section, we emphasize how those concepts relates to the Results of
- this thesis.
+ this thesis. This overview is based on the textbook by
+ [[citetext:Purves2001]], figures have been reproduced from this reference
+ without permission.
+
 
 *** The central nervous system
 
+#+ATTR_LATEX: width=\linewidth
+#+LABEL: fig:cns
+#+CAPTION: *Organization and functions of the human nervous system.* *(A)* The nervous system is made of the central nervous system (containing the brain and spinal cord) and the peripherical nervous system (containing the spinal and cranial nerves). *(B)* Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs. *(C)* Subdivisions of the central nervous system.
+[[file:./figures/cns.png]]
 
-*** Generalities on neocortical physiology
+
+#+ATTR_LATEX: width=\linewidth
+#+LABEL: fig:somato
+#+CAPTION: *Example of the somato-sensory sytem in humans*.
+[[file:./figures/somato-sensory.png]]
+
+Nervous tissue first arose in wormlike organisms about 600 million
+years ago. The *nervous system* is the part of an animal's body that
+controls the body's functions (its voluntary and involuntary
+actions). The nervous system coordinates and transmits signals to and
+from different parts of its body (see the diagram in Figure
+[[fig:cns]]B). In vertebrate species it consists of two main parts: the
+*central nervous system* (CNS) and the *peripheral nervous
+system*. The central nervous system (defined as the brain and spinal
+cord, see Figure [[fig:cns]]A) is usually considered to have seven basic
+parts: the spinal cord, the medulla, the pons,the cerebellum, the
+midbrain, the diencephalon, and the cerebellar hemishperes (or
+cerebrum), see Figure [[fig:cns]]C.
+
+*** Neocortical physiology
 
  The neocortex is a brain structure appearing with the evolution of
  mammals. It is the structure where the most complex cerebral
@@ -38,20 +64,20 @@ to cortical areas, \sim 1-10 mm).
 
  The neocortex, (Latin for /new bark/) is the superficial sheet, the
  top \sim 1mm in humans, of the *cerebral cortex*, the latter being
- the upper layer of the cerebral hemisphere (see Figure
- [[fig:neocortex-anatomy]]). The basic design of the neocortex is
- conserved across all mammals: 1) it is subdivided into functional
- areas called *cortical areas* having a precise cognitive function
- and 2) the cortical surface corresponds to the juxtaposition of
- *cortical columns* comprising about 10000-50000 neurons being each
- around 500 $\mu\mathrm{m}$ wide. A notable difference between small
- mammals (e.g. rodents) and larger mammals (e.g. primates) is the
- presence of *folds* (/giry/ and /sulci/) of the neocortical sheet
- that allow an important increase of the neocortical surface given the
- limited skull size.
+ the upper layer of the cerebral hemisphere (see Figure [[fig:cns]]C and
+ [[fig:neocortex]]A). The basic design of the neocortex is conserved
+ across all mammals: 1) it is subdivided into functional areas called
+ *cortical areas* having a precise cognitive function (e.g. ) and 2)
+ the cortical surface corresponds to the juxtaposition of *cortical
+ columns* comprising about 10000-50000 neurons being each around 500
+ $\mu\mathrm{m}$ wide. A notable difference between small mammals
+ (e.g. rodents) and larger mammals (e.g. primates) is the presence of
+ *folds* (/giry/ and /sulci/) of the neocortical sheet that allow an
+ important increase of the neocortical surface given the limited skull
+ size.
 
 #+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:neocortex-anatomy
+#+LABEL: fig:neocortex
 #+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
 [[file:./figures/neocortical_anatomy.png]]
 
@@ -240,7 +266,7 @@ sdjhfksjhdf
 
 *** Cellular biophysics of neocortical neurons
 
-sudfs
+stereotypical electrophysiological signals called action potential
 
 *** Dendritic integration of synaptic input
 
@@ -286,7 +312,7 @@ What do we know about encoding strategies of sensory information in
 the mammalian CNS ?
 
 Basically, very few. Following the argument revewed in
-[[citet:Brette2015b]], the experimental work on information processing of
+[[citetext:Brette2015b]], the experimental work on information processing of
 sensory input has mostly focused on finding /neural correlates/ of
 sensory processing,
 
@@ -357,14 +383,14 @@ characterization is able to predict the response to noisy input.
 
 - network with extended dendritic structures
 
-* Single cell computation in the asynchronous state of cortical networks :noexport:
+* Single cell computation in the asynchronous state of cortical networks 
   
 ** _Work 1_: Characterizing the firing rate response of neocortical neurons 
 <<sec:layerV-firing-charact>>
 
 *** French summary
 
-*** Article
+*** Article :noexport:
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
@@ -374,13 +400,13 @@ characterization is able to predict the response to noisy input.
 
 *** French summary
 
-*** Article
+*** Article :noexport:
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
-* Population dynamics during sensory processing :noexport:
-** _Work 3_: Scaling of post-synaptic response by recurrent network activity
+* Population dynamics during sensory processing 
+** _Work 3_: Scaling of post-synaptic response by recurrent network activity 
 <<sec:layerV-firing-charact>>
 
 *** French summary
@@ -391,14 +417,14 @@ sensory stimuli. By comparing the response in absence of ongoing
 activity (Down-state), we were able to identify the facilitation of
 due to the ongoing activity (depolarizing cells )
 
-*** Article
+*** Article :noexport:
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
 ** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
 
 *** French summary
-*** Article
+*** Article :noexport:
 
 - collab. Chavanne team
 
@@ -525,7 +551,7 @@ self-sustained activity ?
 # #+LaTeX_HEADER: \geometry{a4paper,total={210mm,297mm}, left=20mm, right=20mm, top=20mm, bottom=20mm, bindingoffset=0mm, columnsep=.8cm}
 #+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
-#+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
+# #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
 #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
 #+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
 # #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
@@ -536,3 +562,5 @@ self-sustained activity ?
 #+LaTeX_HEADER: \usepackage{pdfpages}
 #+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
 #+LaTeX_HEADER: \usepackage[nottoc,numbib]{tocbibind}
+#+LaTeX_HEADER:  \usepackage{chngcntr}
+#+LaTeX_HEADER:  \counterwithout{figure}{chapter}
