@@ -1,8 +1,12 @@
-#+TITLE: Modeling population dynamics in neocortical networks: a bottom-up approach
+#+TITLE: Biophysical and circuit properties underlying population dynamics in neocortical networks 
+# : back-and-forth between theoretical models and experimental characterization
 #+AUTHOR: Yann Zerlaut
 #+DATE: PhD Thesis
 
 ** Résumé
+
+résumé en français 
+
 ** Summary
 
 This thesis devellops a modeling procedure to obtain theoretical
@@ -14,6 +18,116 @@ to cortical areas, \sim 1-10 mm).
 
 * Introduction
 
+*** Generalities on neocortical physiology
+
+#+ATTR_LATEX: width=\linewidth
+#+LABEL: fig:neocortex
+#+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
+[[file:./figures/neocortical_anatomy.png]]
+
+The nervous system is the part of an animal's body that controls the
+body's functions (its voluntary and involuntary actions), it
+coordinates and transmits signals to and from different parts of the
+body (see the diagram in Figure [[fig:cns]]B).  The neocortex (Latin for
+/new bark/) is the superficial sheet of the cerebral cortex, the
+latter being the upper layer of the cerebral hemisphere (see Figure
+[[fig:cns]]C and [[fig:neocortex]]A), it appeared with the evolution of
+mammals and it is the structure where the most complex cerebral
+functions (sensory perception, language, generation of motor commands,
+etc...)  are performed. Understanding the physiological mechanisms
+that render those performances possible is a fundamental question in
+modern biology.
+
+The basic design of the neocortex is conserved across all mammals: 1)
+it is subdivided into functional areas called cortical areas having a
+precise cognitive function and 2) the cortical surface corresponds to
+the juxtaposition of cortical columns comprising about 10000-50000
+neurons being each around 500 $\mu\mathrm{m}$ wide. A notable
+difference between small mammals (e.g. rodents) and larger mammals
+(e.g. primates) is the presence of folds of the neocortical sheet that
+allow an important increase of the neocortical surface given the
+limited skull size.
+
+ Neocortical tissue is mainly composed of neurons as well as glial
+cells, the human brain contains about 100 billions neuronal cells and
+500 billions glial cells. Neuronal cells process information and
+transmit signals thanks to their electrophysiological and chemical
+properties. Neurons are highly interconnected via synapses forming
+recurrent and feedforward networks whose activation corresponds to
+cognitive processes. Glial cells (from Greek /glue/) are traditionally
+thought to: 1) surround neurons, hold them in place and insulate one
+neuron from another 2) supply nutrients and dioxygen to neuronal cells
+and 3) destroy pathogens and remove dead neurons. Though recent
+evidences suggest that glial processes might have a more direct role
+in neocortical function, this potential aspect of neocortical
+processing will be largely ignored within this thesis, we hypothetize
+that glial cells only participate to neocortical function by
+maintaining the /homeostasis/ in neuronal assemblies: insuring the
+stability of neuronal properties and synaptic transmission. We will
+therefore focus on the neuronal aspect of neocortical processes.
+
+A prominent feature of the neocortex is its laminar organization. It
+can be divided into six layers according to different types of
+neuronal cells and different connectivity properties (afferent,
+recurrent and projecting connections). The functional role of this
+laminar organization is still debated, but [[bruno stuff]].
+
+*** Sensory systems as a model of neocortical processing: 
+
+Sensory systems are of particular interest for neuroscientists as they
+encode information coming from the physical world. The experimentalist
+can therefore manipulate those physical quantity in a controlled
+fashion to establish relationships between sensory stimuli and its
+neural representation. Those findings provide a direct access to
+neural representation of stimuli and allow
+
+Because the experimentalist can control variables from
+the
+
+[[Imaging techniques here]]
+
+*** Neocortical processing and population dynamics
+
+Neuronal assemblies represent and process information through the
+emission of stereotyped electrophysiological events: the actions
+potentials. The information encoded by an assembly within a time
+window is thus contained in its /raster activity/: the set of spike
+trains across neurons. What are the quantities whithin this set that
+are relevant for a /downstream/ readout ? This is still an open and
+very controversial question. As an example, an influential theory,
+/rate-based/ coding states that the information is carried by the
+temporal variation of the population firing rate (defined over a short
+time bin). On the other-hand, the more general /spike-based/ theory
+states that the temporal patterns of individual spikes carry the
+information so that the population rate is a very limited description
+of the neuronal asssembly. I will not review here the arguments in
+favor of one view or the other, an insightful review can be found in
+[[citetext:Brette2015b]].
+
+
+- Receptive field in sensory systems: stimulus presentation correlates
+  with increase of population activity
+
+*** Theoretical models of neocortical dynamics
+
+numerical models
+
+*** Analytical descriptions of collective dynamics
+
+mean field description
+
+highlight the core ingredient of the phenomena:
+the transfer function of neocortical neurons
+
+*** The transfer function of neocortical neurons
+
+we develloped a two steps procedure
+
+*** Cellular biophysics 60 years after the study by A. Hodgkin and A. Huxley
+
+controversy spike initiation
+
+* old intro :noexport:
  We introduce here the biological system whose functional properties
  are investigated in this thesis: the mammalian *neocortex*. This part
  is not thought to be an extensive review of the current knowledge
@@ -24,6 +138,10 @@ to cortical areas, \sim 1-10 mm).
  [[citetext:Purves2001]], figures have been reproduced from this reference
  without permission.
 
+#+ATTR_LATEX: width=\linewidth
+#+LABEL: fig:neocortex
+#+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
+[[file:./figures/neocortical_anatomy.png]]
 
 *** The central nervous system
 
@@ -383,14 +501,14 @@ characterization is able to predict the response to noisy input.
 
 - network with extended dendritic structures
 
-* Single cell computation in the asynchronous state of cortical networks 
+* Results
   
 ** _Work 1_: Characterizing the firing rate response of neocortical neurons 
 <<sec:layerV-firing-charact>>
 
-*** French summary
+**** French summary
 
-*** Article :noexport:
+**** Article 							   :noexport:
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
@@ -405,7 +523,6 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
-* Population dynamics during sensory processing 
 ** _Work 3_: Scaling of post-synaptic response by recurrent network activity 
 <<sec:layerV-firing-charact>>
 
@@ -530,6 +647,7 @@ computation: gain modulation from background synaptic input
 
 self-sustained activity ?
 
+*** Sodium inactivation: a key cellular mechanism for population dynamics
 \newpage
 
 \bibliography{tex/biblio}
@@ -537,30 +655,32 @@ self-sustained activity ?
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
-# #+OPTIONS: num: 3
-#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks]
+#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft, 12pt]
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
 #+LaTeX_HEADER:\usepackage[T1]{fontenc}
 #+LaTeX_HEADER:\usepackage[english]{babel}
 #+LaTeX_HEADER:\usepackage{lmodern}
 #+LaTeX_HEADER:\usepackage{amssymb,mathenv,array}
-# #+LaTeX_HEADER:\usepackage{microtype} % Slightly tweak font spacing for aesthetics
 #+LaTeX_HEADER: \usepackage[labelfont=bf]{caption}
-# #+LaTeX_HEADER: \usepackage{geometry}
-# #+LaTeX_HEADER: \geometry{a4paper,total={210mm,297mm}, left=20mm, right=20mm, top=20mm, bottom=20mm, bindingoffset=0mm, columnsep=.8cm}
 #+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
-#+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
-# #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
-#+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
-#+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
-# #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
-#+LaTeX_HEADER: \renewcommand{\thesection}{\roman{section}}
-#+LaTeX_HEADER: \renewcommand{\thechapter}{\Roman{chapter}}
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
 #+LaTeX_HEADER: \usepackage{pdfpages}
-#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Huge\bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
 #+LaTeX_HEADER: \usepackage[nottoc,numbib]{tocbibind}
-#+LaTeX_HEADER:  \usepackage{chngcntr}
-#+LaTeX_HEADER:  \counterwithout{figure}{chapter}
+#+LaTeX_HEADER: \setcounter{secnumdepth}{0} % only removes section numbering
+#+LaTeX_HEADER: \renewcommand{\thechapter}{\,}
+#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \huge\bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
+
+
+# #+OPTIONS: num: 1
+# #+LaTeX_HEADER:\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+# #+LaTeX_HEADER: \usepackage{geometry}
+# #+LaTeX_HEADER: \geometry{a4paper,total={210mm,297mm}, left=20mm, right=20mm, top=20mm, bottom=20mm, bindingoffset=0mm, columnsep=.8cm}
+# #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{chapter} \makeatother 
+# #+LaTeX_HEADER: \makeatletter \@addtoreset{chapter}{part} \makeatother 
+# #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
+# #+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
+# #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
+# #+LaTeX_HEADER:  \usepackage{chngcntr}
+# #+LaTeX_HEADER:  \counterwithout{figure}{chapter}
