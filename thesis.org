@@ -1,5 +1,5 @@
 #+TITLE: Biophysical and circuit properties underlying population dynamics in neocortical networks 
-# : back-and-forth between theoretical models and experimental characterization
+#  : back-and-forth between theoretical models and experimental characterization
 #+AUTHOR: Yann Zerlaut
 #+DATE: PhD Thesis
 
@@ -8,6 +8,10 @@
 résumé en français 
 
 ** Summary
+
+
+
+Undesrtanding
 
 This thesis devellops a modeling procedure to obtain theoretical
 descriptions of population activity in cortical networks. The
@@ -503,10 +507,10 @@ characterization is able to predict the response to noisy input.
 
 * Results
   
-** _Work 1_: Characterizing the firing rate response of neocortical neurons 
+** _Work 1_: Heterogeneous firing response of layer V mice neocortical neurons in the fluctuation-driven regime
 <<sec:layerV-firing-charact>>
 
-**** French summary
+\large *French summary* \normalsize
 
 **** Article 							   :noexport:
 
@@ -516,9 +520,9 @@ characterization is able to predict the response to noisy input.
 
 ** _Work 2_: Heterogeneous firing response induce specific coupling to presynaptic activity properties
 
-*** French summary
+\large *French summary* \normalsize
 
-*** Article :noexport:
+**** Article 							   :noexport:
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
@@ -670,8 +674,9 @@ self-sustained activity ?
 #+LaTeX_HEADER: \usepackage[nottoc,numbib]{tocbibind}
 #+LaTeX_HEADER: \setcounter{secnumdepth}{0} % only removes section numbering
 #+LaTeX_HEADER: \renewcommand{\thechapter}{\,}
-#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \huge\bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
-
+#+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Large \bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
+#+LaTeX_HEADER:  \usepackage{chngcntr}
+#+LaTeX_HEADER:  \counterwithout{figure}{chapter}
 
 # #+OPTIONS: num: 1
 # #+LaTeX_HEADER:\usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -682,5 +687,3 @@ self-sustained activity ?
 # #+LaTeX_HEADER: \makeatletter \@addtoreset{section}{part} \makeatother 
 # #+LaTeX_HEADER: \renewcommand{\thepart}{\Alph{part}}
 # #+LaTeX_HEADER: \renewcommand{\thesection}{\thechapter.\arabic{section}}
-# #+LaTeX_HEADER:  \usepackage{chngcntr}
-# #+LaTeX_HEADER:  \counterwithout{figure}{chapter}
