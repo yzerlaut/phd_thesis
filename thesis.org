@@ -505,7 +505,7 @@ characterization is able to predict the response to noisy input.
 
 - network with extended dendritic structures
 
-* Results
+* Research articles
   
 ** _Work 1_: Heterogeneous firing response of layer V mice neocortical neurons in the fluctuation-driven regime
 <<sec:layerV-firing-charact>>
@@ -553,7 +553,7 @@ due to the ongoing activity (depolarizing cells )
 
 - "normalization"
 
-* Discussion
+* Discussion and perspectives
 
 In this thesis, 
 
