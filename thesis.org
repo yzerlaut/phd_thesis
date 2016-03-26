@@ -9,16 +9,38 @@ résumé en français
 
 ** Summary
 
+The neocortex of awake animals displays an activated state in which
+cortical activity manifests highly complex, seemingly noisy
+behavior. At the level of single neurons the activity is characterized
+by strong subthreshold fluctuations and irregular firing at low rate:
+this constitutes the fluctuation-driven regime, which is believed to
+be central to cortical computations. Sensory processing of natural
+stimuli also evoke sparse response at low population
+rates. Understanding the dynamical and computational properties of
+this regime at the cellular and network level is a key challenge in
+systems neuroscience. Because the reliable computation performed
+during this regime happens on top of strong effects mediated by slow
+population dynamics (such as variable levels of ongoing activity),
+that in turn, determine the integrative and computational properties
+at the cellular level, an accurate quantitative description of
+population dynamics (and its correlate in terms of membrane potential
+fluctuations) appears to be a necessary prerequisite to the
+comprehension of this regime. This thesis devellops a modeling
+framework to obtain theoretical descriptions of population activity in
+cortical networks. The procedure relies on a /bottom-up/ approach: it
+measures quantities at a microscopic scale (the cellular scale, \sim
+10-100 \(\mu\mathrm{m}\)) to predict the behavior on a macroscopic
+scale (from cortical columns to cortical areas, \sim 1-10 mm).
 
+**** List of publications relative to the PhD
 
-Undesrtanding
+- Gain modulation of synaptic inputs by network state in auditory
+  cortex in vivo. Reig, *Zerlaut*, Vergara, Destexhe and
+  Sanchez-Vives. /Journal of Neuroscience/ 35: 2689-2702, 2015.
 
-This thesis devellops a modeling procedure to obtain theoretical
-descriptions of population activity in cortical networks. The
-procedure rely on a /bottom-up/ approach: it measures quantities at a
-microscopic scale (the cellular scale, \sim 10-100 \(\mu\mathrm{m}\))
-to predict the behavior on a macroscopic scale (from cortical columns
-to cortical areas, \sim 1-10 mm).
+- Firing rate response of neocortical neuron in the flucutation-driven
+  regime. *Zerlaut*, Ouanounou, Teleńczuck, Deleuze, Bal and
+  Destexhe (/in revision/)
 
 * Introduction
 
