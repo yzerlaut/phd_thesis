@@ -3,6 +3,7 @@
 #+AUTHOR: Yann Zerlaut
 #+DATE: PhD Thesis
 
+
 ** Résumé
 
 résumé en français 
@@ -98,7 +99,7 @@ neuronal cells and different connectivity properties (afferent,
 recurrent and projecting connections). The functional role of this
 laminar organization is still debated, but [[bruno stuff]].
 
-*** Sensory systems as a model of neocortical processing: 
+*** Sensory systems as a model of neocortical processing
 
 Sensory systems are of particular interest for neuroscientists as they
 encode information coming from the physical world. The experimentalist
@@ -109,6 +110,8 @@ neural representation of stimuli and allow
 
 Because the experimentalist can control variables from
 the
+
+In combination with imaging techniques, sensory systems have revealed
 
 [[Imaging techniques here]]
 
@@ -134,9 +137,20 @@ favor of one view or the other, an insightful review can be found in
 - Receptive field in sensory systems: stimulus presentation correlates
   with increase of population activity
 
+definition of population activity/firing rate in this thesis:
+instantaneous firing rate at the population level (in a bin) <=> spiking probability in time 
+
+flashing bar : hige population response, therefore a change of
+luminosity is associated to a strong population response and subtle
+discrimination/object recognition happens on top of this
+
+some effects are associated
+
 *** Theoretical models of neocortical dynamics
 
 numerical models
+
+Asynchronous Irrregular state has attracted much attention
 
 *** Analytical descriptions of collective dynamics
 
@@ -149,9 +163,19 @@ the transfer function of neocortical neurons
 
 we develloped a two steps procedure
 
-*** Cellular biophysics 60 years after the study by A. Hodgkin and A. Huxley
+we develloped a setup for estimating those functions /in vitro/, 
 
-controversy spike initiation
+but why doing experimental cellular biophysics 60 years after the
+study by A. Hodgkin and A. Huxley ?  The dynamics of ionic-channel
+have been extensively studied in the last 60 years
+
+Nonetheless, cellular biophysics in mammalian neocortical neurons
+still presents
+
+
+A priori, the channels have been well characterized
+
+[[controversy spike initiation]]
 
 * old intro :noexport:
  We introduce here the biological system whose functional properties
@@ -534,46 +558,37 @@ characterization is able to predict the response to noisy input.
 
 \large *French summary* \normalsize
 
-**** Article 							   :noexport:
+**** Article
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
-#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Heterogenous_Firing_Response.pdf}
+# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Heterogenous_Firing_Response.pdf}
 
 ** _Work 2_: Heterogeneous firing response induce specific coupling to presynaptic activity properties
 
 \large *French summary* \normalsize
 
-**** Article 							   :noexport:
+**** Article
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 
-#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
+# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
 ** _Work 3_: Scaling of post-synaptic response by recurrent network activity 
 <<sec:layerV-firing-charact>>
 
-*** French summary
+\large *French summary* \normalsize
 
-In this work, we investigated how the ongoing neocortical dynamics
-associated to the Up-state could affect the post-synaptic response to
-sensory stimuli. By comparing the response in absence of ongoing
-activity (Down-state), we were able to identify the facilitation of
-due to the ongoing activity (depolarizing cells )
-
-*** Article :noexport:
+**** Article
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
 ** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
 
-*** French summary
-*** Article :noexport:
+\large *French summary* \normalsize
 
-- collab. Chavanne team
+**** Article
 
-- Multi-input integration -> origin of strong suppression
-
-- "normalization"
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
 
 * Discussion and perspectives
 
@@ -646,7 +661,25 @@ modulation result from the competition between:
   recurrent connectivity. This mechanism is in favor of the active-state.
 
 
-Requires great care about what is actually measured. Somatic intracellular do not
+The potentiation of the Up-state increases as a function of the number
+of networks when arranged in a feedforward manner.
+
+
+Requires great care about what is actually measured. Somatic
+intracellular do not predict the same effect as multi-unit
+activity. The predictions of this model is that in terms of multi-unit
+activity, the response should be systematically lower in the
+Down-state than in the Up-state. A notable exception would appear for
+very strong stimuli [[cite:Ho2000]] , but this would presumably result ina
+pathological situation as this effect appears when all neurons respond
+[[cite:Ho2000]].
+
+Those ingredients are also present in our mopulation model of
+neocortical integration(though a bit hidden by the strongest effect of
+the assymetries in excitabilities). Is the variability found in
+[[cite:Arieli1996]] explained by the simple gain modulation proposed
+here. When varying external stimuli
+
 
 *** Biophysical and circuit mechanisms underlying cortical normalization
 
@@ -681,7 +714,7 @@ self-sustained activity ?
 * Preamble (options for LaTeX formatting) :noexport:
 
 #+LATEX_CLASS: report
-#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, draft, 12pt]
+#+LaTeX_CLASS_OPTIONS: [twoside, colorlinks, 12pt]
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage[AUTO]{inputenc}
 #+LaTeX_HEADER:\usepackage[T1]{fontenc}
