@@ -46,10 +46,18 @@ scale (from cortical columns to cortical areas, \sim 1-10 mm).
 
 *** Generalities on neocortical physiology
 
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:neocortex
-#+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
-[[file:./figures/neocortical_anatomy.png]]
+#+ATTR_LATEX: :width .85\linewidth
+#+LABEL: fig:cns
+#+CAPTION: *Organization and functions of the human nervous system.* *(A)* The nervous system is made of the central nervous system (containing the brain and spinal cord) and the peripherical nervous system (containing the spinal and cranial nerves). *(B)* Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs. Adapted without permission from [[citetext:Purves2001]].
+[[file:./figures/cns.png]]
+
+
+
+#+ATTR_LATEX: :width 1.1\linewidth
+#+LABEL: fig:somato
+#+CAPTION: *Anatomical and functional organization of a sensory system: example of the human somato-sensory system*. *(A)* Somatosensory information from the body surface is mapped onto dorsal root ganglia (DRG), schematically depicted here as attachments to the spinal cord. The various shades of purple indicate correspondence between regions of the body and the DRG that relay information from the body surface to the central nervous system. Somatosensory information travels from this peripheral sensory receptors toward the spinal cord and brainstem, ultimately sending sensory information to the thalamus, from which it is relayed to the somatic sensory cortex in the postcentral gyrus. *(B)* Somatotopic organization of sensory information. (Top) The locations of primary and secondary somatosensory cortical areas on the lateral surface of the brain. (Bottom) Cortical representation of different regions of skin. Reproduced and adapted without permission from [[citetext:Purves2001]].
+[[file:./figures/somato-sensory.png]]
+
 
 The nervous system is the part of an animal's body that controls the
 body's functions (its voluntary and involuntary actions), it
@@ -57,22 +65,30 @@ coordinates and transmits signals to and from different parts of the
 body (see the diagram in Figure [[fig:cns]]B).  The neocortex (Latin for
 /new bark/) is the superficial sheet of the cerebral cortex, the
 latter being the upper layer of the cerebral hemisphere (see Figure
-[[fig:cns]]C and [[fig:neocortex]]A), it appeared with the evolution of
-mammals and it is the structure where the most complex cerebral
-functions (sensory perception, language, generation of motor commands,
-etc...)  are performed. Understanding the physiological mechanisms
-that render those performances possible is a fundamental question in
-modern biology.
+[[fig:somato]]A), it appeared with the evolution of mammals and it is the
+structure where the most complex cerebral functions (sensory
+perception, language, generation of motor commands, etc...)  are
+performed. Understanding the physiological mechanisms that render
+those performances possible is a fundamental question in modern
+biology.
 
 The basic design of the neocortex is conserved across all mammals: 1)
 it is subdivided into functional areas called cortical areas having a
-precise cognitive function and 2) the cortical surface corresponds to
-the juxtaposition of cortical columns comprising about 10000-50000
-neurons being each around 500 $\mu\mathrm{m}$ wide. A notable
-difference between small mammals (e.g. rodents) and larger mammals
-(e.g. primates) is the presence of folds of the neocortical sheet that
+precise cognitive function (see Figure [[fig:somato]]B) and 2) the
+cortical surface corresponds to the juxtaposition of cortical columns
+comprising about 10000-50000 neurons being each around 500
+$\mu\mathrm{m}$ wide. A notable difference between small mammals
+(e.g. rodents) and larger mammals (e.g. primates, see Figure
+[[fig:somato]]B) is the presence of folds of the neocortical sheet that
 allow an important increase of the neocortical surface given the
 limited skull size.
+
+
+#+ATTR_LATEX: :width 1.05\linewidth :float c
+#+LABEL: fig:diversity-laminar
+#+CAPTION: *Cellular diversity and laminar organization organization of the neocortex*. *(A)* Major neuronal cell types of the adult cerebral cortex.  Cortical neurons (shown here for primates) are categorized into two major classes: spiny excitatory (glutamatergic) neurons and non-spiny inhibitory (GABAergic) interneurons. Reproduced without permission from [[citetext:Kwan2012]]. *(B)* Canonical neocortical circuitry. Green arrows indicate outputs to the major targets of each of the neocortical layers in humans; orange arrow indicates thalamic input (primarily to layer IV); purple arrows indicate input from other cortical areas; and blue arrows indicate input from the brainstem modulatory systems to each layer. Reproduced without permission from [[citetext:Purves2001]].
+[[file:./figures/laminar_cell_compo.png]]
+
 
  Neocortical tissue is mainly composed of neurons as well as glial
 cells, the human brain contains about 100 billions neuronal cells and
@@ -92,27 +108,54 @@ maintaining the /homeostasis/ in neuronal assemblies: insuring the
 stability of neuronal properties and synaptic transmission. We will
 therefore focus on the neuronal aspect of neocortical processes.
 
+
 A prominent feature of the neocortex is its laminar organization. It
 can be divided into six layers according to different types of
-neuronal cells and different connectivity properties (afferent,
-recurrent and projecting connections). The functional role of this
-laminar organization is still debated, but [[bruno stuff]].
+neuronal cells (see Figure [[fig:diversity-laminar]]A) and different
+connectivity properties (afferent, recurrent and projecting
+connections). The functional role of this laminar organization is
+still largely unresolved, but the layer specific connectivity scheme
+(see Figure [[fig:diversity-laminar]]B) suggests that supra-granular
+networks underlie cross-modality communication while infra-granular
+networks might perform computations related to local cortical
+features.
 
-*** Sensory systems as a model of neocortical processing
+In *Work 1* and *Work 2*, we investigate how the biophysical and
+morphological properties of layer V pyramidal neurons in mice visual
+cortex shape their functional properties in a regime mimicking active
+neocortical processing. In *Work 4*, we model a large-scale
+excitatory-inhibitory Layer II-III network (\(\sim\)100mm^2) including
+the horizontal fiber network that interconnects areas responding to
+different sensory features.
 
-Sensory systems are of particular interest for neuroscientists as they
-encode information coming from the physical world. The experimentalist
-can therefore manipulate those physical quantity in a controlled
-fashion to establish relationships between sensory stimuli and its
-neural representation. Those findings provide a direct access to
-neural representation of stimuli and allow
+*** Sensory processing as a model of neocortical computation
 
-Because the experimentalist can control variables from
-the
+Cortical computation can be defined as the operations performed
+between cortical representations (in a general sense, including brain
+state, sensory stimuli, etc...). Sensory systems are of particular
+interest as cortical representations encode information coming from
+the physical world. The experimentalist can therefore manipulate those
+physical quantity in a controlled fashion to establish relationships
+between sensory stimuli and its neural representation. In particular,
+in primary sensory areas, the relation with the physical world keeps a
+relatively simple form. For example, the somatotopic map in the
+primary somatosensory cortex, see Figure [[fig:somato]]C, reflects the
+fact that neurons respond to a stimulus at a given location on the
+skin, while higher order area along the somatosensory pathway would be
+sensitive to more abstract features in the tactile stimulus.
 
-In combination with imaging techniques, sensory systems have revealed
+Primary sensory areas therefore provide a good experimental system to
+investigate the principles of cortical computation. This strategy
+naturally implies the use of an appropriate recording technique to
+image the neural representation, such as intracellular recording,
+extracellular recordings, optical imaging, etc... In *Work 3*, we
+investigate how the neural representation in the primary auditory
+cortex of a simple auditory stimulus (a click of white noise) is
+affected by the level of ongoing activity using intracellular
+recordings /in vivo/. In *Work 4*, we investigate how two distinct
+neural representations (encoding a single flash in two distinct visual
+locations) interacts by using optical imaging /in vivo/.
 
-[[Imaging techniques here]]
 
 *** Neocortical processing and population dynamics
 
@@ -120,24 +163,54 @@ Neuronal assemblies represent and process information through the
 emission of stereotyped electrophysiological events: the actions
 potentials. The information encoded by an assembly within a time
 window is thus contained in its /raster activity/: the set of spike
-trains across neurons. What are the quantities whithin this set that
+trains across neurons. What are the quantities within this set that
 are relevant for a /downstream/ readout ? This is still an open and
-very controversial question. As an example, an influential theory,
-/rate-based/ coding states that the information is carried by the
-temporal variation of the population firing rate (defined over a short
-time bin). On the other-hand, the more general /spike-based/ theory
-states that the temporal patterns of individual spikes carry the
-information so that the population rate is a very limited description
-of the neuronal asssembly. I will not review here the arguments in
-favor of one view or the other, an insightful review can be found in
-[[citetext:Brette2015b]].
+very controversial question. As an example, an influential theory
+[[cite:Shadlen1994]], /rate-based/ coding states that the information is
+carried by the temporal variation of the population firing rate
+(defined over a short time bin). On the other-hand, the more general
+/spike-based/ theory states that the temporal patterns of individual
+spikes carry the information so that the population rate is a very
+limited description of the neuronal asssembly. I will not review here
+the arguments in favor of one view or the other, insightful reviews
+can be found in the classical paper from [[citetext:Shadlen1994]] (in
+favor of the /rate-based/ theory) or in [[citetext:Brette2015b]] (in favor
+of the /spike-based/ theory). The purpose of this thesis is not to
+take position in favor of one or the other theory (also given that a
+definitive answer is unlikely to hold in the cortex in general,
+e.g. olfactory system vs. visual system). Nonetheless, we argue here
+that, whatever the /neural code/, an accurate description of
+population dynamics in neocortical networks is a necessary
+prerequisite to the understanding of cortical computation.
 
+
+#+ATTR_LATEX: :width .6\linewidth
+#+LABEL: fig:cns
+#+CAPTION: *Spontaneous activity in /awake/ mice visual cortex exhibits strong fluctuations of population dynammics.* *(a)* Schematic of a single shank of silicon electrode array, and spike waveforms of four example wide-spiking neighbour neurons measured with the array in deep layers of V1 of an awake mouse. *(b)* Population raster of spontaneous activity in 66 neurons recorded from the whole array. Arrows indicate the four example neurons shown in *a*. *(c)* Population rate measured by summing all the spikes detected on the entire array. Reproduced without permission from [[citetext:Okun2015a]].
+[[file:./figures/pop_dyn.png]]
+
+First, let's define population dynamics. We define population dynamics
+as the variations of the instantaneous firing rate at the population
+level (after binning in a \(\sim\) 5ms time window) <=> spiking
+probability in time. We
+
+In a /rate coding/ scheme, population dynamics constitute the /neural
+code/, the increase of the firing of a given population encodes a
+given sensory feature, the relevance of understanding population
+dynamics is thus straightforward. In a /temporal coding/ scheme,
+
+
+
+We briefly review here some experimental evidences that support this
+view.
+
+1. Spontaneous activity shows strong fluctuations
+
+2.
 
 - Receptive field in sensory systems: stimulus presentation correlates
   with increase of population activity
 
-definition of population activity/firing rate in this thesis:
-instantaneous firing rate at the population level (in a bin) <=> spiking probability in time 
 
 flashing bar : hige population response, therefore a change of
 luminosity is associated to a strong population response and subtle
@@ -553,7 +626,7 @@ characterization is able to predict the response to noisy input.
 * Research articles :noexport:
   
 ** _Work 1_: Heterogeneous firing response of layer V mice neocortical neurons in the fluctuation-driven regime
-<<sec:layerV-firing-charact>>
+<<sec:work1>>
 
 \large *French summary* \normalsize
 
@@ -564,6 +637,7 @@ characterization is able to predict the response to noisy input.
 # #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Heterogenous_Firing_Response.pdf}
 
 ** _Work 2_: Heterogeneous firing response induce specific coupling to presynaptic activity properties
+<<sec:work2>>
 
 \large *French summary* \normalsize
 
@@ -573,7 +647,7 @@ characterization is able to predict the response to noisy input.
 # #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
 ** _Work 3_: Scaling of post-synaptic response by recurrent network activity 
-<<sec:layerV-firing-charact>>
+<<sec:work3>>
 
 \large *French summary* \normalsize
 
@@ -582,6 +656,7 @@ characterization is able to predict the response to noisy input.
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
 ** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
+<<sec:work4>>
 
 \large *French summary* \normalsize
 
@@ -638,6 +713,8 @@ We argue here that the prese
 
 The present modeling procedure resul
 
+*** Understanding recurrent activity
+
 *** Heterogeneity in neocortex and its functional impact
 
 - Does this heterogeneity remains in more mature animals ?
@@ -678,7 +755,6 @@ neocortical integration(though a bit hidden by the strongest effect of
 the assymetries in excitabilities). Is the variability found in
 [[cite:Arieli1996]] explained by the simple gain modulation proposed
 here. When varying external stimuli
-
 
 *** Biophysical and circuit mechanisms underlying cortical normalization
 
