@@ -3,7 +3,6 @@
 #+AUTHOR: Yann Zerlaut
 #+DATE: PhD Thesis
 
-
 ** Résumé
 
 résumé en français 
@@ -551,7 +550,7 @@ characterization is able to predict the response to noisy input.
 
 - network with extended dendritic structures
 
-* Research articles
+* Research articles :noexport:
   
 ** _Work 1_: Heterogeneous firing response of layer V mice neocortical neurons in the fluctuation-driven regime
 <<sec:layerV-firing-charact>>
@@ -590,7 +589,7 @@ characterization is able to predict the response to noisy input.
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
 
-* Discussion and perspectives
+* Discussion
 
 In this thesis, 
 
