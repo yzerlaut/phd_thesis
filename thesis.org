@@ -177,27 +177,40 @@ can be found in the classical paper from [[citetext:Shadlen1994]] (in
 favor of the /rate-based/ theory) or in [[citetext:Brette2015b]] (in favor
 of the /spike-based/ theory). The purpose of this thesis is not to
 take position in favor of one or the other theory (also given that a
-definitive answer is unlikely to hold in the cortex in general,
-e.g. olfactory system vs. visual system). Nonetheless, we argue here
-that, whatever the /neural code/, an accurate description of
-population dynamics in neocortical networks is a necessary
+definitive answer is unlikely to hold generally in the cortex in
+general, e.g. olfactory system vs. visual system). Nonetheless, we
+argue here that, whatever the /neural code/, an accurate description
+of population dynamics in neocortical networks is a necessary
 prerequisite to the understanding of cortical computation.
 
 
 #+ATTR_LATEX: :width .6\linewidth
-#+LABEL: fig:cns
-#+CAPTION: *Spontaneous activity in /awake/ mice visual cortex exhibits strong fluctuations of population dynammics.* *(a)* Schematic of a single shank of silicon electrode array, and spike waveforms of four example wide-spiking neighbour neurons measured with the array in deep layers of V1 of an awake mouse. *(b)* Population raster of spontaneous activity in 66 neurons recorded from the whole array. Arrows indicate the four example neurons shown in *a*. *(c)* Population rate measured by summing all the spikes detected on the entire array. Reproduced without permission from [[citetext:Okun2015a]].
+#+LABEL: fig:pop-rate
+#+CAPTION: *Spontaneous activity in awake mice visual cortex exhibits strong fluctuations of population activity.* *(a)* Schematic of a single shank of silicon electrode array, and spike waveforms of four example wide-spiking neighbour neurons measured with the array in deep layers of V1 of an awake mouse. *(b)* Population raster of spontaneous activity in 66 neurons recorded from the whole array. *(c)* Population rate measured by summing all the spikes detected on the entire array (both well-isolated units and multi-unit activity) with 1ms resolution and smoothed with a Gaussian of half-width 12ms (N.B. the smoothing can be seen as a way to reduce the narrow sampling of the population). Reproduced without permission from [[citetext:Okun2015a]].
 [[file:./figures/pop_dyn.png]]
 
 First, let's define population dynamics. We define population dynamics
-as the variations of the instantaneous firing rate at the population
-level (after binning in a \(\sim\) 5ms time window) <=> spiking
-probability in time. We
+as the temporal variations of the instantaneous firing rate at the
+population level. This definition is already problematic as an
+instantaneous rate can not be defined, a firing rate has to be sampled
+over a given time window. The question of the time-window thus becomes
+critical, especially in the /rate/ vs. /temporal/ coding debate. We
+take here a relatively conservative value:
+
+ (after binning in a \(\sim\) 5ms time window) <=>
+spiking probability in time. 
+
+We give an example of how such a quantity can be determined using
+extracellular recordings in Figure [[fig:pop-rate]]
+
 
 In a /rate coding/ scheme, population dynamics constitute the /neural
-code/, the increase of the firing of a given population encodes a
-given sensory feature, the relevance of understanding population
-dynamics is thus straightforward. In a /temporal coding/ scheme,
+code/, the increase of the firing of a given cortical sub-population
+encodes a given sensory feature, the relevance of understanding
+population dynamics is thus straightforward. In a /temporal coding/
+scheme, the population activity is not sufficient, it is important to
+have a sub-10ms precision in the spike timings and one should know
+exactly which neurons are spiking.
 
 
 
@@ -211,12 +224,6 @@ view.
 - Receptive field in sensory systems: stimulus presentation correlates
   with increase of population activity
 
-
-flashing bar : hige population response, therefore a change of
-luminosity is associated to a strong population response and subtle
-discrimination/object recognition happens on top of this
-
-some effects are associated
 
 *** Theoretical models of neocortical dynamics
 
@@ -248,380 +255,6 @@ still presents
 A priori, the channels have been well characterized
 
 [[controversy spike initiation]]
-
-* old intro :noexport:
- We introduce here the biological system whose functional properties
- are investigated in this thesis: the mammalian *neocortex*. This part
- is not thought to be an extensive review of the current knowledge
- about this complex brain structure, we briefly present the
- physiological concepts on which this study relies. At the end of each
- section, we emphasize how those concepts relates to the Results of
- this thesis. This overview is based on the textbook by
- [[citetext:Purves2001]], figures have been reproduced from this reference
- without permission.
-
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:neocortex
-#+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
-[[file:./figures/neocortical_anatomy.png]]
-
-*** The central nervous system
-
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:cns
-#+CAPTION: *Organization and functions of the human nervous system.* *(A)* The nervous system is made of the central nervous system (containing the brain and spinal cord) and the peripherical nervous system (containing the spinal and cranial nerves). *(B)* Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs. *(C)* Subdivisions of the central nervous system.
-[[file:./figures/cns.png]]
-
-
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:somato
-#+CAPTION: *Example of the somato-sensory sytem in humans*.
-[[file:./figures/somato-sensory.png]]
-
-Nervous tissue first arose in wormlike organisms about 600 million
-years ago. The *nervous system* is the part of an animal's body that
-controls the body's functions (its voluntary and involuntary
-actions). The nervous system coordinates and transmits signals to and
-from different parts of its body (see the diagram in Figure
-[[fig:cns]]B). In vertebrate species it consists of two main parts: the
-*central nervous system* (CNS) and the *peripheral nervous
-system*. The central nervous system (defined as the brain and spinal
-cord, see Figure [[fig:cns]]A) is usually considered to have seven basic
-parts: the spinal cord, the medulla, the pons,the cerebellum, the
-midbrain, the diencephalon, and the cerebellar hemishperes (or
-cerebrum), see Figure [[fig:cns]]C.
-
-*** Neocortical physiology
-
- The neocortex is a brain structure appearing with the evolution of
- mammals. It is the structure where the most complex cerebral
- functions (sensory perception, language, generation of motor
- commands, etc...) are performed. One can guess its functional
- importance in humans by realizing how energetically /expensive/ is
- this relatively tiny piece of tissue: while being only \sim 2% of the
- body mass, it represents respectively \sim 25 % and \sim 20% of the
- glucose and dioxygen consumption.
-
- The neocortex, (Latin for /new bark/) is the superficial sheet, the
- top \sim 1mm in humans, of the *cerebral cortex*, the latter being
- the upper layer of the cerebral hemisphere (see Figure [[fig:cns]]C and
- [[fig:neocortex]]A). The basic design of the neocortex is conserved
- across all mammals: 1) it is subdivided into functional areas called
- *cortical areas* having a precise cognitive function (e.g. ) and 2)
- the cortical surface corresponds to the juxtaposition of *cortical
- columns* comprising about 10000-50000 neurons being each around 500
- $\mu\mathrm{m}$ wide. A notable difference between small mammals
- (e.g. rodents) and larger mammals (e.g. primates) is the presence of
- *folds* (/giry/ and /sulci/) of the neocortical sheet that allow an
- important increase of the neocortical surface given the limited skull
- size.
-
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:neocortex
-#+CAPTION: The major components of the nervous system and their functional relationships. (A) The CNS (brain and spinal cord) and PNS (spinal and cranial nerves). (B) Diagram of the major components of the central and peripheral nervous systems and their functional relationships. Stimuli from the environment convey information to processing circuits within the brain and spinal cord, which in turn interpret their significance and send signals to peripheral effectors that move the body and adjust the workings of its internal organs.
-[[file:./figures/neocortical_anatomy.png]]
-
- Neocortical tissue is mainly composed of *neurons* as well as *glial
- cells*, the human brain contains about 100 billions neuronal cells
- and 500 billions glial cells. The *grey matter* is the part contaning
- the neuronal cell bodies und unmyelinated fibers, while the deeper
- *white matter* is composed of the myelinated fibers. Neuronal cells
- process information and transmit signals thanks to their
- electrophysiological and chemical properties. Neurons are highly
- interconnected via *synapses* forming recurrent and feedforward
- networks whose activation corresponds to cognitive processes. Glial
- cells (from Greek /glue/) are traditionally thought to: 1) surround
- neurons, hold them in place and insulate one neuron from another 2)
- supply nutrients and dioxygen to neuronal cells and 3) destroy
- pathogens and remove dead neurons. Though recent evidences suggest
- that glial processes might have a more direct role in neocortical
- function, this potential aspect of neocortical processing will be
- largely ignored within this thesis, we hypothetize that glial cells
- only participate to neocortical function by maintaining the
- /homeostasis/ in neuronal assemblies: insuring the stability of
- neuronal properties and synaptic transmission. We will therefore
- focus on the neuronal aspect of neocortical processes.
-
-*** Laminar structure
-
-A prominent feature of the neocortex is its laminar organization. It
-can be divided into six layers according to different types of
-neuronal cells and different connectivity properties (afferent,
-recurrent and projecting connections). From pial surface to white
-matter (see Figure [[fig:laminar-structure]]), we can distinguish:
-
-- *Layer I*: the molecular layer. It consists mainly of extensions of
-  apical dendritic tufts of pyramidal neurons and horizontally
-  oriented axons, as well as glial cells. Those inputs onto apical
-  tufts are thought to be important for /feedback/ control of local
-  cortical computations. It also contains few neurons that, in the
-  adult brain, seem to be only GABAergic interneurons.
-
-- *Layer II/III*: the external granular layer. It contains small pyramidal
-  neurons (the apical arbors are moderately develloped because of the
-  proximity to the pial surface) and numerous stellate neurons. They
-  receive input from the layer IV excitatory neurons and have a strong
-  interlaminar recurrent connectivity within a cortical column.
-
-- *Layer III*: the external pyramidal layer. It contains predominantly
-  small and medium-size pyramidal neurons, as well as non-pyramidal
-  excitatory and inhibitory neurons with vertically oriented
-  intracortical axons. The intracolumnar circuitry of layer III
-  pyramidal neurons is dominated by local intralaminar connections and
-  the layer IV translaminar input. Recent evidence suggests that this
-  is also true for at least a subpopulation of L III inhibitory cells,
-  i.e. the fast-spiking basket cells (Xu and Callaway, 2009). The
-  transcolumnar circuitry of L III pyramidal cells has been more
-  difficult to study in the slice. Although structurally and
-  functionally supragranular transcolumnar pathways have been
-  described (Fox, 2002; Brecht et al., 2003; Broser et al., 2008),
-  they are much less numerous in L III than in L II (Larsen and
-  Callaway, 2006; Bruno et al., 2009)( own still unpublished
-  results). This may be one reason for the so far lacking paired
-  recordings of L III pyramidal neurons located in neighboring
-  columns, in vitro and in vivo. Since the connection probability
-  decreases monotonically with distance (Holmgren et al., 2003), new
-  methods to pre-identify connected neurons (Wickersham et al., 2007)
-  have to be further refined (Boldogkoi et al., 2009), in order to
-  study the precise functional and morphological determinants of
-  transcolumnar L III circuits (which is true for all other layers as
-  well). Concerning the output of L III, consistently, L V(b) has been
-  found to be the major intracolumnar target structure which
-  represents one of the backbone feedforward projections of the
-  “canonical microcircuitry” (Martin and Whitteridge, 1984; Thomson
-  and Bannister, 2003; Kampa et al., 2006; Lefort et al.,
-  2009). However, evidence has accumulated that also a functionally
-  weak but anatomically consistent feedback projection to L IV
-  excitatory neurons is formed (Martin and Whitteridge, 1984; Schubert
-  et al., 2003; Larsen and Callaway, 2006; Lefort et al., 2009).
-
-- *Layer IV*: the internal granular layer. It contains different types
-  of stellate and pyramidal neurons, and is the main target of
-  thalamocortical afferents from thalamus type Cneurons[6] as well as
-  intra-hemispheric corticocortical afferents.
-
-- *Layer V*: the internal pyramidal layer. It contains large pyramidal
-  neurons which give rise to axons leaving the cortex and running down
-  to subcortical structures (such as the basal ganglia). In the
-  primary motor cortex of the frontal lobe, layer V contains Betz
-  cells, whose axons travel through the internal capsule, the brain
-  stem and the spinal cord forming the corticospinal tract, which is
-  the main pathwayfor voluntary motor control.  
-
-The cortical layers are not simply stacked one over the other; there
-exists characteristic connections between different layers and
-neuronal types, which span all the thickness of the cortex. These
-cortical microcircuits are grouped into cortical columns and
-minicolumns. It has been proposed that the minicolumns are the basic
-functional units of the cortex. [9,sdkfjsdfjh] In 1957, Vernon
-Mountcastle showed that the functional properties of the cortex change
-abruptly between laterally adjacent points; however, they are
-continuous in the direction perpendicular to the surface. Later works
-have provided evidence of the presence of functionally distinct
-cortical columns in the visual cortex (Hubel and Wiesel, 1959),[10:skdhfsd]
-auditory cortex, and associative cortex.  Cortical areas that lack a
-layer IV are called agranular. Cortical areas that have only a
-rudimentary layer IV are called dysgranular.[11;sdkshdf] Information
-processing within each layer is determined by different temporal
-dynamics with that in the layers II/III having a slow 2 Hz oscillation
-while that in layer V having a fast 10–15 Hz one.[12]
-
-# #+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:laminar-structure
-#+CAPTION: Laminar structure of the neocortex
-[[file:./figures/laminar_cell_compo.jpg]]
-
-In section [[sec:layerV-firing-charact]], we investigate the firing
-properties of the layer V pyramidal neurons. In section
-[[sec:propag-wave]], we build up a model of the layer II/III recurrent
-network stimulated by its input from layer IV.
-
-**** TODO update laminar structure
-
-- edit text, too similar to original version !
-- find a nice figure for the laminar organisation (highlight on circuitry !)
-- check [[url:http://www.nature.com/neuro/journal/v18/n2/pdf/nn.3917.pdf]]
-- current fig [[url:http://dev.biologists.org/content/139/9/1535]]
-
-*** Neurons in neocortex
-
-As already suggested in the previous section, the neocortex is
-characterized by a strong diversity in cellular types. Cells are
-usually classified according to electrophysiological, morphological,
-chemical and genetic markers. [[(check this on Markram interneurons
-review)]]
-
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:schematic-neuron
-#+CAPTION: Description of a neocortical neuron, taken from [[url:https://en.wikipedia.org/wiki/Neuron]]
-[[file:./figures/schematic_neuron.png]]
-
-Nonetheless, all neurons have some common features, see Figure
-[[fig:schematic-neuron]]. A nerve cell contains a nucleus delimited by a
-plasmid membrane. The cytoplasm contains organites common to all cells
-(endoplasmic reticulum, mitochondrion, Golgi apparatus, etc...). The
-cell body, or *soma*, is the central part of the cell, its typical
-diameter is around 20 \(\mu\mathrm{m}\). Nerve cells have two well
-separated protrusions : the *dendrites* and the *axon*, receiving the
-input and sending the output respectively. The dendritic arbor is a
-ramified structure receiving contacts from other projecting neurons:
-the *synapses*. When presynaptic neurons activate, a neurotransmitter
-release happens at the synapse what opens selective ionic channels to
-inject a current through the postsynaptic membrane. Those synaptic
-currents sum along the dendritic arbor to reach the somatic and axon
-hillock compartments. For high enough depolarizations, an *action
-potential* is triggered and will propagate along the axon. The axonal
-terminal also has ramifications and forms *presynaptic boutons*
-([[check]]) onto other nerve cells, and will, in turn, induce
-post-synaptic currents in those target cells when active.
-
-We now describe differences between neocortical cells, the main cells
-found in the neocortical sheet are shown on Figure [[cells-of
-neocortex]]. A first distinction comes from the dichotomy between
-*excitatory* and *inhibitory* neurons, indeed because of their
-different neurotransmitter type (e.g. glutamate for the excitatory
-cells or GABAa for the inhibitory cells), nerve cells can induce
-either depolarizing currents or hyperpolarizing currents (promoting or
-inhibiting the triggering of a spike). Neurons also differ in their
-dendritic arborescence, their electrophysiological properties [[(see the
-illustration of a Fast Spiking cell vs a Regular Spiking cell)]] as well
-as their axonal projections.
-
-# #+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:cells-of neocortex
-#+CAPTION: Cellular diversity in neocortex.
-[[file:./figures/laminar_cell_compo.jpg]]
-
-In section [[sec:layerV-firing-charact]], we investigate the cellular
-heterogeneity within one /standard/ cell class: the layer V pyramidal
-neurons in the primary visual cortex of juvenile mice.
-
-*** Synaptic transmission
-
-synapses
-
-*** Neuronal networks 
-
-sdjhfksjhdf
-
-*** Cellular biophysics of neocortical neurons
-
-stereotypical electrophysiological signals called action potential
-
-*** Dendritic integration of synaptic input
-
-cable theory
-
-*** Dynamical regimes of neocortical activity
-
-- Up and Down states
-- Asynchronous activity
-
-
-*** Information processing in primary sensory cortices
-
-Sensory systems are of particular interest for neuroscientists as they
-encode information coming from the physical world, which the
-experimentalist can manipulate in a controlled fashion to establish
-relationships between sensory stimuli and its neural
-representation. Those findings provide a direct access to neural
-representation of stimuli and allow 
-
-Because the experimentalist can control variables from
-the
-
-*** Organizing principles : anatomy
-
-Though all sensory systems in mammalians (visual, auditory, olfactory
-and somato-sensory) have their unique features, a common organizing
-principle can be identified for the early pathway (at least to a first
-order approximation): sensory transducer project to the thalamus, who
-in turn projects to the primary sensory area.
-
-#+ATTR_LATEX: width=\linewidth
-#+LABEL: fig:sensory-system-organizition
-#+CAPTION: Organization of the sensory systems in mammalian nervous system
-
-*** Experimental approaches to investigate sensory computation
-
-kjsfs
-
-*** Scope of the study: population rate dynamics in neocortical networks
-
-What do we know about encoding strategies of sensory information in
-the mammalian CNS ?
-
-Basically, very few. Following the argument revewed in
-[[citetext:Brette2015b]], the experimental work on information processing of
-sensory input has mostly focused on finding /neural correlates/ of
-sensory processing,
-
-- Receptive field in sensory systems: stimulus presentation correlates
-  with increase of population activity
-
-In the remaining of this thesis we will adopt a conservative view: we 
-
-*_Contribution_*: investigating the cellular and circuit mechanims
-constraining population rate dynamics in neocortical networks
-
-*** A theoretical framework to describe neocortical population dynamics
-*** Modeling asychronous irregular dynamics
-
-El Boustani & Destexhe, 2009
-
-**** TODO investigate what is the output when you have the transfer function !
-
-- redo the numerical simulations of networks
-
-- redo the analysis
-
-*** The core of the description: the neuronal /transfer function/
-
-*** Determining the input-output properties of neocortical neurons in the asynchronous regime
-
-**** Specificity of neocortical neurons: why doing current-clamp experiments in 2015 ?
-
-
-**** The problem of the electrophysiological characterization in neocortical neurons
-
-
-**** classical characterization : Hodgkin-Huxley like approach
-
-
-**** :TODO: characterization of sodium channel properties in xenopus cultures
-
-- show that it works
-
-- maybe do some noise protocols and show that the electrophysiological
-characterization is able to predict the response to noisy input.
-
-
-**** :TODO: characterization of sodium channel properties in neocortical neurons
-
-- show that it doesn't work
-
-- $\rightarrow$ need to characterize the input-output function
-
-
-**** The compartementalization problem
-
-- take a compartimentalized model and show the space clamp problem
-
-- solution: having a phenomenological description of single cell
-  computation, not based on a detailed understanding of the
-  biophysical properties of neocortical neurons
-
-*** A reduced model of the cortical sheet
-
-- Ring model with propagation delays
-
-- propagating waves
-
-*** Incorporating biophysical cellular features
-
-- network RS/FS
-
-- network with extended dendritic structures
 
 * Research articles :noexport:
   
