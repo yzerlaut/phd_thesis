@@ -14,36 +14,37 @@ cortical activity manifests highly complex, seemingly noisy
 behavior. At the level of single neurons the activity is characterized
 by strong subthreshold fluctuations and irregular firing at low rate:
 this constitutes the fluctuation-driven regime, which is believed to
-be central to cortical computations. Sensory processing of natural
-stimuli also evoke sparse response at low population
-rates. Understanding the dynamical and computational properties of
-this regime at the cellular and network level is a key challenge in
-systems neuroscience. Because the reliable computation performed
-during this regime happens on top of strong effects mediated by slow
-population dynamics (such as variable levels of ongoing activity),
-that in turn, determine the integrative and computational properties
-at the cellular level, an accurate quantitative description of
-population dynamics (and its correlate in terms of membrane potential
-fluctuations) appears to be a necessary prerequisite to the
+be central to cortical computations.
+
+The focus of this thesis is to understand how the biophysical
+properties at the cellular level combined with the properties of the
+network architecture shapes the dynamics of neural assemblies.
+
+
+As a first step, we formulated a two steps procedure to derive the
+
+
+
+Sensory processing of natural stimuli also evoke sparse response at
+low population rates. Understanding the dynamical and computational
+properties of this regime at the cellular and network level is a key
+challenge in systems neuroscience. Because the reliable computation
+performed during this regime happens on top of strong effects mediated
+by slow population dynamics (such as variable levels of ongoing
+activity), that in turn, determine the integrative and computational
+properties at the cellular level, an accurate quantitative description
+of population dynamics (and its correlate in terms of membrane
+potential fluctuations) appears to be a necessary prerequisite to the
 comprehension of this regime. This thesis devellops a modeling
 framework to obtain theoretical descriptions of population activity in
-cortical networks. The procedure relies on a /bottom-up/ approach: it
-measures quantities at a microscopic scale (the cellular scale, \sim
-10-100 \(\mu\mathrm{m}\)) to predict the behavior on a macroscopic
-scale (from cortical columns to cortical areas, \sim 1-10 mm).
+cortical networks. 
 
-**** List of publications relative to the PhD
-
-- Gain modulation of synaptic inputs by network state in auditory
-  cortex in vivo. Reig, *Zerlaut*, Vergara, Destexhe and
-  Sanchez-Vives. /Journal of Neuroscience/ 35: 2689-2702, 2015.
-
-- Firing rate response of neocortical neuron in the flucutation-driven
-  regime. *Zerlaut*, Ouanounou, Teleńczuck, Deleuze, Bal and
-  Destexhe (/in revision/)
+The procedure relies on a /bottom-up/ approach: it measures quantities
+at a microscopic scale (the cellular scale, \sim 10-100
+\(\mu\mathrm{m}\)) to predict the behavior on a macroscopic scale
+(from cortical columns to cortical areas, \sim 1-10 mm).
 
 * Introduction
-
 *** Generalities on neocortical physiology
 
 #+ATTR_LATEX: :width .85\linewidth
@@ -156,7 +157,6 @@ recordings /in vivo/. In *Work 4*, we investigate how two distinct
 neural representations (encoding a single flash in two distinct visual
 locations) interacts by using optical imaging /in vivo/.
 
-
 *** Neocortical processing and population dynamics
 
 Neuronal assemblies represent and process information through the
@@ -179,9 +179,27 @@ of the /spike-based/ theory). The purpose of this thesis is not to
 take position in favor of one or the other theory (also given that a
 definitive answer is unlikely to hold generally in the cortex in
 general, e.g. olfactory system vs. visual system). Nonetheless, we
-argue here that, whatever the /neural code/, an accurate description
-of population dynamics in neocortical networks is a necessary
-prerequisite to the understanding of cortical computation.
+briefly argue here that, whatever the /neural code/, an accurate
+description of population dynamics in neocortical networks is a
+necessary prerequisite to the understanding of cortical
+computation. In a /rate coding/ scheme, population dynamics constitute
+the /neural code/, the increase of the firing of a given cortical
+sub-population encodes a given sensory feature, the relevance of
+understanding population dynamics is thus straightforward. In a
+/temporal coding/ scheme, the population activity is not sufficient,
+it is important to have a very precise description in the spike
+timings and one should know exactly which neurons are spiking. In a
+/temporal coding/ scheme (or in a /stochastic temporal coding/ scheme,
+see [[citetext:Rossant2011]]), the robustness of the code relies on the
+ability of neurons to behave as coincidence detectors [[cite:Softky1993]]
+and this feature has been shown to critically rely on the properties
+of the background activity [[cite:Rudolph2003,Rossant2011]], i.e. on
+effects mediated by population dynamics. Finally, several canonical
+effects are mediated by population dynamics: e.g. the
+response-dependency on ongoing activity levels
+[[cite:Arieli1996,DeWeese2004,Scholvinck2015,Lin2015]], or gain modulation
+of sensory responses putatively mediated by top-down modulation of
+cortical activity [[cite:Zagha2013,Harris2013]].
 
 
 #+ATTR_LATEX: :width .6\linewidth
@@ -189,72 +207,153 @@ prerequisite to the understanding of cortical computation.
 #+CAPTION: *Spontaneous activity in awake mice visual cortex exhibits strong fluctuations of population activity.* *(a)* Schematic of a single shank of silicon electrode array, and spike waveforms of four example wide-spiking neighbour neurons measured with the array in deep layers of V1 of an awake mouse. *(b)* Population raster of spontaneous activity in 66 neurons recorded from the whole array. *(c)* Population rate measured by summing all the spikes detected on the entire array (both well-isolated units and multi-unit activity) with 1ms resolution and smoothed with a Gaussian of half-width 12ms (N.B. the smoothing can be seen as a way to reduce the narrow sampling of the population). Reproduced without permission from [[citetext:Okun2015a]].
 [[file:./figures/pop_dyn.png]]
 
-First, let's define population dynamics. We define population dynamics
-as the temporal variations of the instantaneous firing rate at the
+
+We now give the precise definition of population dynamics adopted in
+this thesis, as well as its relevance and limitations for the
+description of neocortical processes. We define population dynamics as
+the temporal variations of the instantaneous firing rate at the
 population level. This definition is already problematic as an
 instantaneous rate can not be defined, a firing rate has to be sampled
 over a given time window. The question of the time-window thus becomes
 critical, especially in the /rate/ vs. /temporal/ coding debate. We
-take here a relatively conservative value:
+take a rather low value: dt \(\sim\) 10ms, meaning that we focus on
+slow dynamics, up to the \(\sim\) 100Hz frequency range. For a
+population of size \(N\), the population firing rate is thus given by
+\(\nu(t)=S(t)/N/dt\), where \(S(t)\) is the number of spikes between
+\(t\) and \(t+dt\), we give an example of how such a quantity can be
+determined using extracellular recordings in Figure [[fig:pop-rate]] (the
+1ms bins followed by the 12ms Gaussian smoothing approximates our
+\(\sim\) 10ms timescale). 
 
- (after binning in a \(\sim\) 5ms time window) <=>
-spiking probability in time. 
+Because we define this firing rate as a firing probability (within
+each time bin), we assume that neurons fire in an irregular manner
+where this probabilistic view is relevant (see next section). This
+also puts constraints on the range of firing rate values described by
+population dynamics, values should not exceed 100Hz (probability of 1
+in 10ms time bin). All cortical processes that corresponds to
+instantaneous firing rate larger than 100Hz do not fit in our
+framework of population dynamics. The precise spiking response seen in
+various models of sensory processing, e.g. the response to single
+tones in auditory cortex [[cite:Wehr2003]] or the response to natural
+stimuli in primary visual cortex [[cite:Baudot2013]] typically represent
+such processes. For those precise responses, our modeling framework is
+inefficient and only the precise modeling of the precisely-timed
+afferent stimulation could capture this type of responses. This thesis
+thus focuses on describing /slow/ population dynamics and will thus
+have an explanatory power for all phyiological processes mediated by
+this slow dynamics (stimuli of low frequency content, effects of
+ongoing activity, top-down modulations, lateral interactions, etc...).
 
-We give an example of how such a quantity can be determined using
-extracellular recordings in Figure [[fig:pop-rate]]
-
-
-In a /rate coding/ scheme, population dynamics constitute the /neural
-code/, the increase of the firing of a given cortical sub-population
-encodes a given sensory feature, the relevance of understanding
-population dynamics is thus straightforward. In a /temporal coding/
-scheme, the population activity is not sufficient, it is important to
-have a sub-10ms precision in the spike timings and one should know
-exactly which neurons are spiking.
-
-
-
-We briefly review here some experimental evidences that support this
-view.
-
-1. Spontaneous activity shows strong fluctuations
-
-2.
-
-- Receptive field in sensory systems: stimulus presentation correlates
-  with increase of population activity
-
+In *Work 3*, we investigate how the post-synaptic response to low
+amplitude stimuli is amplified by a strong level of ongoing recurrent
+dynamics. In *Work 4*, we show that such a descritpion in terms of
+population dynamics accurately reproduce the response to brief flashed
+stimuli (of duration >10ms) in the primary visual cortex of fixating
+monkey.
 
 *** Theoretical models of neocortical dynamics
 
-numerical models
+On the theoretical side, much effort has been devoted to design
+theoretical models reproducing the characteristics of neocortical
+activity /in vivo/. In particular, the regime characterizing the
+/awake/ state has attacted much attention. In this regime, spontaneous
+activity is characterized by irregular and weakly synchronized spiking
+[[cite:Softky1993,Shadlen1994,Ecker2010,Renart2010]] as well as strong
+membrane potential fluctuations at the neuronal level (reviewed in
+[[citetext:Destexhe2003]]).
 
-Asynchronous Irrregular state has attracted much attention
+Such a stochastic-like regime has been successfully achieved in
+/balanced recurrent networks/
+[[cite:Tsodyks1995,Vreeswijk1996,Amit1997]]. The mechanism underlying this
+regime within this architecture can be easily understood. If single
+neurons have irregular spiking, they will produce fluctuating
+excitatory and inhibitory input to a single neuron via recurrent
+connections. Then, provided the network is /balanced/, so that
+excitation and inhibition cancel each other statistically, neurons
+will spike irregularly because spiking will result from the
+fluctuations (a near random walk toward the threshold). We conclude
+that, if the input of the neuron is irregular, it will produce
+irregular spiking. This situation therefore enables the existence of
+an asynchronous state where irregular spiking sustains itself in a
+recurrent network. The core idea has been initially formulated in
+networks of binary neurons [[cite:Vreeswijk1996]], since then, theoretical
+work has increased the biological realism of this picture
+[[cite:Amit1997,Brunel1999,Brunel2000,Vogels2005,ElBoustani2007,Kumar2008]].
+
+The balanced network will be used as a theoretical basis all along the
+thesis, either to reproduce synaptic input (*Work 1* and *Work 2*) or
+to build networks (*Work 3* and *Work 4*). In *Work 4*, we adapt the
+classical randomly sparsely connected balanced network model by
+including an assymetry in the electrophysiological properties of
+excitatory and inhibitory cells.
 
 *** Analytical descriptions of collective dynamics
 
-mean field description
+Thanks to their relative simplicity, those reduced theoretical model
+of cortical assemblies have a notable advantage: they allow an
+analytical description of the emergent collective dynamics (via
+several well-choosen approximations, see [[citetext:Renart2004]] for a
+review). Indeed, the reasoning of the previous section can be
+formalized mathematically to obtain equations describing the
+population dynamics. Those self-consistency approaches describing
+recurrent dynamics are called /mean-field/ approaches (originally, the
+same kind of self-consistent approach allowed to derive the
+magnetization in spin glasses, i.e. the mean magnetic
+field). Similarly to the situation of spin-glasses, they predict the
+conditions of the regime's stability and they allow to calculate the
+mean firing rate of the network as a function of its parameters
+[[cite:Vreeswijk1996,Amit1997,Brunel2000,Latham2000,ElBoustani2009]]. For
+example, /mean-field/ analysis predicts the conditions leading to
+run-away activity (similar to epileptic discharge)
+[[cite:Amit1997,Brunel2000]] or the emergence of fast oscillations
+[[cite:Brunel1999,Brunel2000,Brunel2003]]. 
 
-highlight the core ingredient of the phenomena:
-the transfer function of neocortical neurons
+Interestingly, they also describe the network response to a given
+afferent input [[cite:Vreeswijk1996,Amit1997,Ledoux2011]] and therefore
+offer a very interesting possibility to describe neocortical
+computation.
+
+This last point is the main motivation behind this thesis. *Work 1*
+and *Work 2* contributes to making those /mean-field/ formalism more
+/biologically-realistic/. In *Work 4*, we also investigate the
+explanatory power of one of those form of analytical descriptions (a
+Markovian formalism combined with a semi-analytical approach, see
+[[citetext:ElBoustani2009]]) in a network showing assymetric
+electrophysiological properties between excitation and inhibition.
 
 *** The transfer function of neocortical neurons
 
-we develloped a two steps procedure
+At the core of /mean-field/ formalisms lie the cellular /transfer
+function/, i.e. the function that translate the presynaptic release
+frequencies into a spiking probability (the transfer function is
+defined within our /population dynamics/ framework). Those /transfer
+functions/ account for the cellular computation and, within the
+/mean-field/ picture (that might fail at capturing network dynamics,
+see e.g. [[citetext:Ostojic2014]]), the network dynamics is solely the
+recurrent amplification of this cellular computation. 
 
-we develloped a setup for estimating those functions /in vitro/, 
+The /transfer function/ is thus the key ingredient of network dynamics
+within this framework. This is also the important insight of the
+/mean-field/ description: having highlighted the crucial features at
+the cellular level that controls population dynamics. The hypothesis
+behind this thesis is therefore that by accurately describing the
+neuronal transfer function, we will accurately predict emergent
+phenomena at the network level.
 
-but why doing experimental cellular biophysics 60 years after the
-study by A. Hodgkin and A. Huxley ?  The dynamics of ionic-channel
-have been extensively studied in the last 60 years
-
-Nonetheless, cellular biophysics in mammalian neocortical neurons
-still presents
-
-
-A priori, the channels have been well characterized
-
-[[controversy spike initiation]]
+Characterizing the transfer functions of neocortical neurons is the
+focus of *Work 1* and *Work 2*. Neocortical cells are very complex
+units: they are characterized by a extended dendritic arborization
+while the spike initiation mechanism lies at the axon initial segment,
+close to the soma. To deal with this complexity, we formulated an
+approximation that arbitrarily separate the problem into two distinct
+problem to make it amenable to analysis. First, dendritic integration
+of irregular excitatory and inhibitory synaptic input will shape the
+properties of the membrane potential fluctuations at the soma. We
+performed this analysis in *Work 2* by using cable theory
+[[cite:Rall1962,Rall1977]]. Then, we investigate how those membrane
+potential fluctuations at the soma are translated into spikes. This is
+the focus of *Work 1*, we performed this analysis /in vitro/ on layer
+V neocortical cells of young mice visual cortex\footnote{It could be asked here. Why performing experimental cellular biophysics 60 years after the ground-breaking study of Hodgkin and Huxley (1952) ? Since then, the dynamics of ionic-channels have been extensively studied and characterized in isolated preparations. This analysis could thus be done numerically. Nonetheless, cellular biophysics in mammalian neocortical neurons does not easily reduce to ionic-channels dynamics, either because of compartmentalization specificities (McCormick et al., 2007; Kole and Stuart, 2008; Brette, 2013) or exotic channel-gating properties (Naundorf et al., 2006, 2007). As those mammalian-specific properties (for which there is no theoretical consensus) might have a critical impact on the transfer function (Ilin et al. 2013), it requires an experimental determination.}.
 
 * Research articles :noexport:
   
@@ -297,9 +396,12 @@ A priori, the channels have been well characterized
 
 #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
 
-* Discussion
+* Discussion :noexport:
 
 In this thesis, 
+
+while investigating the transfer function /in vitro/ we found that
+neocortical neurons exhibited a strong cell-to-cell variability.
 
 *** Rationale behind a /bottom-up/ approach: models of high empirical content
 
@@ -415,7 +517,10 @@ computation: gain modulation from background synaptic input
 self-sustained activity ?
 
 *** Sodium inactivation: a key cellular mechanism for population dynamics
+
 \newpage
+
+* References
 
 \bibliography{tex/biblio}
 
@@ -430,7 +535,7 @@ self-sustained activity ?
 #+LaTeX_HEADER:\usepackage{lmodern}
 #+LaTeX_HEADER:\usepackage{amssymb,mathenv,array}
 #+LaTeX_HEADER: \usepackage[labelfont=bf]{caption}
-#+LaTeX_HEADER: \hypersetup{allcolors = blue} % to have all the hyperlinks in 1 color
+#+LaTeX_HEADER: \hypersetup{allcolors = black} % to have all the hyperlinks in 1 color
 #+LaTeX_HEADER: \usepackage{natbib}
 #+LaTeX_HEADER: \bibliographystyle{apalike}
 #+LaTeX_HEADER: \usepackage{pdfpages}
@@ -438,8 +543,8 @@ self-sustained activity ?
 #+LaTeX_HEADER: \setcounter{secnumdepth}{0} % only removes section numbering
 #+LaTeX_HEADER: \renewcommand{\thechapter}{\,}
 #+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Large \bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
-#+LaTeX_HEADER:  \usepackage{chngcntr}
-#+LaTeX_HEADER:  \counterwithout{figure}{chapter}
+#+LaTeX_HEADER: \usepackage{chngcntr}
+#+LaTeX_HEADER: \counterwithout{figure}{chapter}
 
 # #+OPTIONS: num: 1
 # #+LaTeX_HEADER:\usepackage{microtype} % Slightly tweak font spacing for aesthetics
