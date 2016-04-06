@@ -1,5 +1,4 @@
 #+TITLE: Biophysical and circuit properties underlying population dynamics in neocortical networks 
-#  : back-and-forth between theoretical models and experimental characterization
 #+AUTHOR: Yann Zerlaut
 #+DATE: PhD Thesis
 
@@ -20,47 +19,50 @@ architecture shapes this asynchronous dynamics.
 This thesis builds up on the so-called /mean-field/ models of network
 dynamics, a theoretical formalism that describes population dynamics
 via a self-consistency approach. At the core of this formalism lie the
-transfer function: the input-output description of individual
+neuronal transfer function: the input-output description of individual
 neurons. The first part of this thesis focuses on deriving
 /biologically-realistic/ neuronal transfer functions. We first
 formulate a two step procedure to incorporate biological details (such
 as an extended dendritic structure and the effect of various ionic
-channel properties) into this transfer function.
+channels) into this transfer function based on experimental
+characterizations.
 
 First, we investigated /in vitro/ how layer V pyramidal neocortical
-neurons respond to membrane potential fluctuations. We found that, not
-only individual neurons strongly differ in terms of their
-excitability, but also, and unexpectedly, in their sensitivities to
-fluctuations. In addition, using theoretical modeling, we attempted to
-reproduce these results. The model predicts that heterogeneous levels
-of biophysical properties such as sodium inactivation, sharpness of
-sodium activation and spike frequency adaptation account for the
-observed diversity of firing rate responses.
+neurons respond to membrane potential fluctuations on a cell-by-cell
+basis. We found that, not only individual neurons strongly differ in
+terms of their excitability, but also, and unexpectedly, in their
+sensitivities to fluctuations. In addition, using theoretical
+modeling, we attempted to reproduce these results. The model predicts
+that heterogeneous levels of biophysical properties such as sodium
+inactivation, sharpness of sodium activation and spike frequency
+adaptation account for the observed diversity of firing rate
+responses.
 
 Then, we studied theoretically how dendritic integration in branched
 structures shape the membrane potential fluctuations at the soma. We
-found that dependending on the type of presynaptic activity, they lead
-to various comodulations of the membrane potential fluctuations. We
-showed that, when combined with the heterogenous firing responses,
-individual neurons differentially respond to different types of
-presynaptic activities because of those various comodulations. We
-argue that, because this mechanism offers a way to produce
-differential activation as a function of the input properties,
-biophysical heterogeneity might contribute to the specific activation
-of neural sub-populations during neocortical processing.
+found that, dependending on the type of presynaptic activity, various
+comodulations of the membrane potential fluctuations could be
+achieved. We showed that, when combining this observation with the
+heterogenous firing responses found experimentally, individual neurons
+differentially responded to the different types of presynaptic
+activities. We thus propose that, because this mechanism offers a way
+to produce specific activation as a function of the input properties,
+biophysical heterogeneity might contribute to encoding of the stimulus
+properties during sensory processing in neural networks.
 
 The second part of this thesis investigates how circuit properties,
-such as recurrent connectivity and lateral connectivity, might impact
-sensory responses by effects mediated by population dynamics.
+such as recurrent connectivity and lateral connectivity, combine with
+biophysical properties to impact sensory responses by effects mediated
+by population dynamics.
 
-We investigated how the effect of a high level of ongoing dynamics
-(the Up-state compared to the Down-state) had an impact on the scaling
-of post-synaptic responses. We found that the competition between
+We first investigated what was the effect of a high level of ongoing
+dynamics (the Up-state compared to the Down-state) on the scaling of
+post-synaptic responses. We found that the competition between
 recruitment within the active recurrent network (in favor of high
 responses in the Up-state) and the increased conductance level due to
 background activity (in favor of reduced responses in the Up-state)
 predicted a non trivial stimulus-response relationship as a function
-of the intesnity of the stimulation. This predictions was shown to
+of the intensity of the stimulation. This predictions was shown to
 accurately captures measurements of post-synaptic membrane potential
 responses in response to cortical, thalamic or auditory stimulation in
 rat auditory cortex /in vivo/.
@@ -79,14 +81,91 @@ combined with the horizontal fibre network are the key components of
 this phenomena.
 
 Taken together, those results emphasize the explanatory power of
-/biologically-realistic/ theoretical models of population dynamics for
-cortical processing. Thus, they seem to offer a solid theoretical
-basis on top of which more subtle cortical computations can be
-investigated.
+/biologically-realistic/ theoretical models of population
+dynamics. Because they seem to offer a solid theoretical basis to
+account for the strong effects mediated by population dynamics during
+neocortical processing, this framework opens the way toward the
+understanding of the more subtle aspects of neocortical computations.
 
 ** Résumé
 
+Le néocortex possède un état activé dans lequel l'activité corticale
+manifeste un comportement complexe. Au niveau cellulaire, l'activité
+est charactérisé par de fortes fluctuations sous-liminaire du
+potential membranaire et une décharge irrégulière à basse
+fréquence. Au niveau du réseau, l'activité est marqué par un faible
+niveau de synchronie et une dynamique chaotique. Néanmoins, c'est dans
+ce régime que l'information est traité de manière fiable à travers
+dans les réseaux neuronaux. Ce régime est donc crucial pour le
+traitement de l'information par le cortex. Dans cette thèse, nous
+contribuons à sa compréhension en examinant comment les propriétés
+biophysiques au niveau cellulaire combiné avec les propriétés
+d'architecture des réseaux façonne cette dynamique asynchrone.
 
+Cette thèse repose sur les modèles de dynamique de réseaux appellés
+modèles de /champ moyen/, un formalisme théorique qui décrit la
+dynamique de population grâce à une approche auto-consistente. Au
+coeur de ce formalisme se trouve la /fonction de transfert/ neuronale:
+la fonction entrée-sortie d'un neurone. La première partie de cette
+thèse s'attache à dériver des fonctions de transfert /biologiquement
+réalistes/. Nous avons formulé une étape en deux temps pour incorporer
+des détails biologiques (comme une structure dendritique ou les effets
+de divers canaux ioniques) dans cette fonction de transfert à partir
+de charactérisation expérimentale.
+
+Dans un premier temps, nous avons examiné /in vitro/ comment les
+neurones néocorticaux pyramidaux de la couche V du cortex visuel
+répondent à des fluctuations du potentiel membranaire. Nous avons
+observé que les neurones individuels ne différent pas seulement en
+termes d'excitabilités, mais ils diffèrent aussi dans leur
+sensibilités aux paramètres des fluctuations. Dans un deuxième temps,
+nous avons étudié théoriquement comment l'intégration dendritique dans
+des structures arborescente façonne les fluctuations au soma. Nous
+avons observé que, en fonctoin des propriétés de l'activité
+présynaptique, différentes comodulations des paramètres de
+fluctuations pouvaient être obtenues. En combinant cette observation
+avec nos mesures expérimentales, nous avons observé que les neurones
+que cela induisait couplages différents entre activité synaptique et
+décharge neuronale pour chaque neurones. Nous proposons donc que,
+puisque ce méchanisme offre un moyen d'activer spécifiquement certains
+neurones en fonction des propriétés de l'entrée, l'hétérogénéité
+biophysique pourrait contribué à l'encodage de propriétés des stimuli
+dans les traitement de l'information sensorielle.
+
+La deuxième partie de cette thèse examine comment les propriétés
+d'architecture des réseaux neuronaux se combinent avec les propriétés
+biophysiques et affectent les réponses sensorielles via des effets de
+dynamiques de populations.
+
+Nous avons tout d'abord examiné théoriquement comment un haut niveau
+d'activité spontanée impactait les réponses post-synaptiques dans le
+cortex. Nous avons observé que la compétition entre le recrutement
+dans le réseau cortical activé et les effets de conductances associés
+prédisait une relation non-triviale entre l'intensité des stimuli et
+l'amplitude des réponses. Cette prédiction fut observée dans de
+enregistrements de réponses post-synaptiques dans le cortex auditif du
+rat /in vivo/ en réponse à des stimuli corticaux, thalamiques et
+auditifs.
+
+Pour finir, en tirant avantage des approches de champs moyens, nous
+avons construit un modèle grande échelle du réseau des couches II-III
+incluant le réseau des fibres horizontales. Nous avons examiné les
+propriétés intégratives spatio-temporelle du modèle et nous les avons
+comparé avec des mesures par imageries optiques de l'activité
+cérébrale chez le singe éveillé. En particulier, nous avons
+reconstruit un paradigme expérimentale en traitement visuel: le
+mouvement apparent. Le modèle prédit un fort signal suppressif dont le
+profil spatio-temporel correspond quantitativement à celui observé /in
+vivo/. Ce qui suggère que la combinaison des propriétés intégrative du
+réseau capturés par notre approche et du réseau des fibres
+horizontales sont les ingrédients clefs de ce phénomènes.
+
+Dans leur ensemble, ces résultats soulignent le pouvoir explicatif des
+modèles /biologiquement-réalistes/ de dynamiques de population
+neuronales. Parceque ces modèles semblent offrir un solide socle
+théoriques pour décrire les forts effets de dynamique de populations
+associés au traitement corticale, ce cadre ouvre la voie à la
+compréhension des aspect plus subtiles du traitement néocortical.
 
 * Introduction
 *** Generalities on neocortical physiology
@@ -398,53 +477,147 @@ potential fluctuations at the soma are translated into spikes. This is
 the focus of *Work 1*, we performed this analysis /in vitro/ on layer
 V neocortical cells of young mice visual cortex[fn::It could be asked here. Why performing experimental cellular biophysics 60 years after the ground-breaking study of [[citetext:Hodgkin1952b]] ? Since then, the dynamics of ionic-channels have been extensively studied and characterized in isolated preparations. This analysis could thus be done numerically. Nonetheless, cellular biophysics in mammalian neocortical neurons does not easily reduce to ionic-channels dynamics, either because of compartmentalization specificities [[cite:McCormick2007,Kole2008,Brette2013]] or exotic channel-gating properties [[cite:Naundorf2006,Naundorf2007]]. As those mammalian-specific properties (for which there is no theoretical consensus) might have a critical impact on the transfer function [[cite:Ilin2013]], it requires an experimental determination.].
 
-* Research articles :noexport:
+* Research articles
 
 ** _Work 1_: Heterogeneous firing response of layer V mice neocortical neurons in the fluctuation-driven regime
 <<sec:work1>>
 
-\large *French summary* \normalsize
+*French summary*
+\vspace{.5cm}
 
-**** Article
+Charactériser les propriétés entrées-sorties des neurones néocorticaux
+est d'une importance cruciale pour comprendre les propriétés
+émergentes au niveau du réseau. Dans le régime de décharge irrégulière
+qui charactérise l'état éveillé, determiner ces propriétés représente
+un problème théorique et expérimentale complexe.
 
-#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
+Dans ce travail, nous étudions /in vitro/ le taux de décharge de
+neurones individuels de la couche V du cortex visual de jeunes souris
+en réponse à des fluctuations du potentiel membranaire. Nous
+conduisons cette étude grâce a des enregistrement életrophysiologiques
+intracellulaire en combinant le /dynamics-clamp/ et la technique du
+patch perforé. 
 
-# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Heterogenous_Firing_Response.pdf}
+Nous avons observé que les neurones ne diffèrent pas uniquement dans
+leur excitabilité, mais aussi dans leur sensibilité aux propriétés des
+fluctuations. Nous avons essayé de reproduire ces charactéristiques
+sur des modèles neuronaux théoriques établis. Le modèle prédit que des
+niveaux hétérogènes de propriétés biphysiques tels que l'inactivation
+sodique, la force du courant sodique et le courant d'adaptation
+reproduit nos mesures expérimentales.
 
-** _Work 2_: Heterogeneous firing response induce specific coupling to presynaptic activity properties
+Parceque la réponse en taux de décharge détermine la dynamique de
+population dans le régime asynchrone, nos résultats montrent que les
+assemblées neuronales sont fonctionnellemtn très inhomogène dans le
+cortex de la souris jeune, ce qui devrait avoir des conséquences
+importantes dans la phase initiale du traitement visuelle.
+
+# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
+
+** _Work 2_: Heterogeneous firing responses induce specific coupling to presynaptic activity properties
 <<sec:work2>>
 
-\large *French summary* \normalsize
+*French summary*
+\vspace{.5cm}
 
-**** Article
-#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
+Le traitement néocortical repose sur l'activation spécifique de
+sous-populations dans les réseaux néocorticaux. Bien que des
+connectivités spécifiques soit, a priori, le méchanisme principale qui
+sous-tend ce principe fonctionnel, nous étudions dans ce travail un
+méchanisme possiblement complémentaire: est-ce que des propriétés
+biophysiques différentes peuvent donner lieu à des activations
+différentes.
 
+Dans ce but, nous construisons un modèle simplifié d'arborescence
+dendritique (que nous calibrons sur des mesures /in vitro/) basé sur
+la règle de Rall. Nous proposons une dérivation analytique pour
+calculer les propriétés des fluctuations au soma en fonction des
+propriétés de la stimulation synaptique. Cette description
+mathématique permet d'émuler diverses formes d'activtité synaptique:
+balancée, non-balancée, purement proximale, purement distale ou
+synchronisée.
+
+Nous avons en effet observé que, dues à leurs différentes propriétés
+biophysiques, différents neurones répondaient différemment a ces types
+d'activités. Mais l'unique contribution significative est,
+trivialement, la différence d'excitabilité de ces différents
+neurones. Une exception intéressante apparait néanmois pour l'activité
+proximale: une augmentation de l'activité proximale peut augmenter
+l'activité pour certains neurones ou la diminuer pour d'autres
+quelquesoit leur activité. Cette propriété est expliqué par leur
+sensibilité à la vitesse des fluctuations que nous avions précedemment
+relié au niveau de densité des canaux sodiques et à l'inactivation des
+canaux sodiques. 
+
+
+
+# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
 # #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
 ** _Work 3_: Gain Modulation of Synaptic Inputs by Network State in Auditory Cortex In Vivo
 <<sec:work3>>
 
-Scaling of post-synaptic response by recurrent network activity 
+*French summary*
+\vspace{.5cm}
 
-\large *French summary* \normalsize
+Les circuits récurrents corticaux génèrent de l'activité spontanée qui
+oscille entre état activé et état quiescent dans le sommeil à ondes
+lentes ou sous anésthésie. Ces différents états d'activation modulent
+le gain de la transmmission synaptique. Cependant la modulation imposé
+par les états activé est disparate dans la littérature, on reporte das
+certains cas une augmentation du gain ou une diminution dans d'autres
+cas. Dans ce travail, nous testons l'hypothèse que ces différentes
+observations dépendent de l'intensité de la stimulation. Nous avons
+comparé les potentiels post-synaptique dans les états activé et
+quiescent en réponse à de stimulations corticales, thalamiques et
+auditives dans le cortex auditif du rat. Dans les états activés, les
+faibles réponses étaient potentiées par l'état activé alors que pour
+des fortes intensités, elles étaient atténués par rapport à l'état
+quiescent. Nous avons examiné théoriquement comment un haut niveau
+d'activité spontanée impactait les réponses post-synaptiques dans le
+cortex. Nous avons observé que la compétition entre le recrutement
+dans le réseau cortical activé et les effets de conductances associés
+prédisait une relation non-triviale entre l'intensité des stimuli et
+l'amplitude des réponses. 
 
-
-
-
-**** Article
-
-#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
+# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
 ** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
 <<sec:work4>>
 
-\large *French summary* \normalsize
+*French summary*
+\vspace{.5cm}
 
-**** Article
+L'imagerie VSD s'est révélé un outil majeur pour l'exploration de
+comment la dynamique de population façonne les fonctions
+corticales. Néanmoins, à notre connaissance, il n'existe pas de modèle
+théorique qui offre une explication du lien entre les sources de
+signaux imagés et la dynamique neuronale pour les échelles spatiales
+imagées par les l'imagerie optique. Dans ce travail, nous tirons parti
+du travail théorique effectué à l'échelle mésoscopique (les approches
+/mean-field/) pour construire un modèle large-échelle de la dynamique
+de population tout en gardant un correlat en terme de dynamique
+cellulaire (en particulier en terme de potentiel membranaire) pour
+pouvoir générer d prédictions pour le signal imagés par la technique
+VSD.
 
-#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
+La première partie de ce travail étudie la validité et les faiblesses
+du formalisme théorique pour décrire l'activité d'une colonne
+corticale. Nous avons construit un modèle grande échelle du réseau des
+couches II-III incluant le réseau des fibres horizontales. Nous avons
+examiné les propriétés intégratives spatio-temporelle du modèle et
+nous les avons comparé avec des mesures par imageries optiques de
+l'activité cérébrale chez le singe éveillé. En particulier, nous avons
+reconstruit un paradigme expérimentale en traitement visuel: le
+mouvement apparent. Le modèle prédit un fort signal suppressif dont le
+profil spatio-temporel correspond quantitativement à celui observé /in
+vivo/. Ce qui suggère que la combinaison des propriétés intégrative du
+réseau capturés par notre approche et du réseau des fibres
+horizontales sont les ingrédients clefs de ce phénomènes.
 
-* Discussion :noexport:
+# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
+
+* Discussion
 
 In this thesis, 
 
@@ -568,7 +741,6 @@ self-sustained activity ?
 
 \newpage
 
-* References
 
 \bibliography{tex/biblio}
 
