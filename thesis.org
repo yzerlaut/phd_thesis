@@ -512,7 +512,7 @@ assemblées neuronales sont fonctionnellemtn très inhomogène dans le
 cortex de la souris jeune, ce qui devrait avoir des conséquences
 importantes dans la phase initiale du traitement visuelle.
 
-# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Heterogenous_Firing_Response.pdf}
 
 ** _Work 2_: Heterogeneous firing responses induce specific coupling to presynaptic activity properties
 <<sec:work2>>
@@ -551,8 +551,8 @@ canaux sodiques.
 
 
 
-# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Diverse_Coupling.pdf}
-# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
+#+LATEX: \includepdf[pages={2-},scale=0.99]{papers/Diverse_Coupling.pdf}
+#+LATEX: \includepdf[pages={2-},scale=0.99]{papers/supplementary_Diverse_Coupling.pdf}
 
 ** _Work 3_: Gain Modulation of Synaptic Inputs by Network State in Auditory Cortex In Vivo
 <<sec:work3>>
@@ -580,7 +580,7 @@ dans le réseau cortical activé et les effets de conductances associés
 prédisait une relation non-triviale entre l'intensité des stimuli et
 l'amplitude des réponses. 
 
-# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Gain2014.pdf}
 
 ** _Work 4_: Spatio-temporal dynamics of multi-input integration in primary visual cortex: comparison between a /mean-field/ model  and optical imaging of population activity /in vivo/
 <<sec:work4>>
@@ -615,104 +615,207 @@ vivo/. Ce qui suggère que la combinaison des propriétés intégrative du
 réseau capturés par notre approche et du réseau des fibres
 horizontales sont les ingrédients clefs de ce phénomènes.
 
-# #+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
+#+LATEX: \includepdf[pages={1-},scale=0.99]{papers/Mean_Field.pdf}
 
 * Discussion
 
-In this thesis, 
+In this thesis, we aimed at understanding how the biophysical and
+circuit properties characterizing neocortical assemblies shape
+population dynamics in neural networks.
 
-while investigating the transfer function /in vitro/ we found that
-neocortical neurons exhibited a strong cell-to-cell variability.
+While investigating how layer V pyramidal cells respond to membrane
+potential fluctuations, we found a strong heterogeneity between cells
+in their firing response. Consequently, we develloped an analytical
+framework including dendritic integration to investigate the putative
+functional consequences of this cell-to-cell variability. In parallel,
+we studied how recurent and lateral connectivity might influence
+neocortical processing. We now discuss those results.
 
-*** Rationale behind a /bottom-up/ approach: models of high empirical content
+*** Heterogeneity in neocortex
 
-At this stage, it is worth comparing the theoretical model resulting
-from our /bottom-up/ approach to other models in the litterature.
+We found a strong heterogeneity in the firing response of neocortical
+neurons in the visual cortex of juvenile mice in *Work 1*. Many
+factors could underlie this variability, notably: 1) recording at
+different days (between P8 and P13), 2) recording over different
+animals (see e.g. [[citetext:Schulz2006]]) or 3) there is indeed an
+intrinsic variability within the layer V neocortical network in
+juvenile mice. We could quantify the impact of hypothesis 1) and it
+was found relatively small, on the other hand hypothesis 2) is hard to
+quantify because of the low number of recorded cells per animal.
 
-Competing models for macroscopic population dynamics are
-phenomenological models, the most prominent example being the model of
-[[citetext:Rubin2013]] for primary visual cortex computation. We will
-focus on this model within this discussion. This model has only two
-variables: the excitatory and inhibitory population activities
-(comparable to our two population model). It has also very few
-parameters: the 3 parameters of their /power law/ input-output
-function and the connectivity parameters. This very low number of
-parameters might be seen  as a 
+Even in the hypothesis of the intrinsic heterogeneity in juvenile mice
+cortex, a natural question is whether it this features disappears in
+more mature animals. This is hard to answer from the litterature as
+experimental characterization usually report results with respect to a
+/control/ situation. Nonetheless, the heterogeneity seems much reduced
+in adult animals. [[citetext:Kondgen2008b]] studied the response of mature
+layer V neurons in somato-sensory cortex to modulated noisy input. The
+quantity that will shape this response is somehow similar to our
+"sensitivity to the speed of the fluctuations", and as visually
+estimated from the presented errorbars, the variability seems much
+reduced, although still present (and all inputs were adjusted to
+reproduce a baseline trend). On the other, at least \(\sim\)4mV
+standard deviation in action potential threshold levels seems to be
+routinely measured in adult mice cortex
+[[cite:Crochet2011,Okun2015a,Yang2015]].
 
-The number of parameters is obvisouly a lot larger (ionic channel
-parameters, synaptic quantities, membrane quantities, morphology
-parameters, circuit properties, ...)
+An important remark is that we performed this study using the
+/perforated patch/ technique and not the widespread /whole cell/
+technique. A possibility is that, because of the /dialysis/ of the
+intracellular medium, /whole cell/ recordings render the
+electrophysiological properties more homogenous. The /perforated
+patch/ technique woudl thus reveal the /true/ heterogeneity. On the
+opposite, maybe the /perforated patch/ technique introduces
+cell-to-cell variability. A precise quantification of those possible
+effects appears as a necessary step for future studies.
+
+Consequently, we believe that the main contribution of our work was
+only to 1) design a functionnally relevant space to scan neuronal
+responses and 2) evidence its ability to capture cell-to-cell
+variability in a relatively favorable system (because immature), but
+the evidence and extent of the intrinsic functional heterogeneity in
+neocortical networks remains a fairly open problem.
+
+*** Putative functional impact of heterogeneity
 
 
-We now examine this comparison in the light of an epistemological
-consideration: the distinction between /empirical content/ and
-/empirical accuracy/ (adapted from [[citetext:Brette2015a]], where it was
-discussed for models of spike initiation). The empirical accuracy
+In *Work 2*, we speculated that the biophysical heterogeneity that we
+reported could offer a /multiplexing/ mode to cortical
+computation. Some neurons would preferentially respond to local
+network activity (proximally targetting activity), while some other
+neurons would respond either to long-range stimulation or an increased
+synchrony due to a change in stimulus statistics. The core of this
+mechanism would be that neurons possess various levels of sodium
+inactivation. Slow fluctuations due to distal or medium conductance
+input do not allow a neuron with strong inactivation to fire. On the
+other hand, the strong conductance (because localized) associated to
+proximal input produces very fast fluctuations and allow to
+deinactivate sodium channels and thus to elicit spikes. At this stage,
+this is a very speculative statement, it is should be investigated
+whether neocortical dynamics /in vivo/ and its associated modulations
+of the membrane potential fluctuations render those effects possible.
 
---> from Brette paper
+Previous theoretical work [[cite:Mejias2012]] in recurrent networks
+suggested that a given heterogeneity level in action potential
+threshold could optimize network information transmission for the rate
+coding strategy. This value was found to be around 4mV, quite close
+from the \(\sim\) 5-6mV from our characterization of *Work
+1*. Evidencing such a contribution /in vivo/ would be extremely
+challenging, it would require to reduce or increase the excitability
+variations on a whole population and then study its ability to
+transmit/amplify a given sensory input.
 
-Therefore,we must carefullydistinguishbetween stories
-(“gatingvariables”) andactualscientific content—that is,
-thearticulationof themodel with reality. Theaddedvalueof detailed
-modelscan becomprehended inamore satisfying wayusing theconcept of
-empirical content described byphilosopherof science
-KarlPopper [13].Theempiricalcontent ofatheory isthe
-setofpossiblefalsifiers of thetheory. Inshort, for amodel,it isthetype
-ofpredictionsthat a model canmake, which canbe falsified.
+On the other hand, because neural networks lie in a very high
+dimensional space (including electrophysiological, synaptic,
+neuromodulatory and circuit properties), one can not exclude that this
+heterogeneity is not compensated by an other variability so that the
+effect on network dynamics cancels, see [[citetext:Prinz2004]] for an
+example of such an effect (reviewed in [[citetext:Marder2006]]).
 
+*** On the need of analytical descriptions of dendritic integration
 
+In *Work 2*, we presented an analytical description of dendritic
+integration in the fluctuation-driven regime (whose weaknesses were
+also emphasized). We suggested that it could be of great use to
+theoretical analysis in systems neuroscience. We present here such an
+example.
 
+It was proposed that the recurrent circuitry of neocortical networks
+could self-sustain activity (i.e. maintain activity in the absence of
+an external drive) [[cite:Kuhn2004,Vogels2005,Kumar2008]]. It is thus an
+important question to evaluate whether cortical activity is
+self-sustained during asynchronous dynamics or whether it is driven by
+an asynchronous input (e.g. a thalamic drive) as those two scenarii
+will surely lead to different computations of afferent input.
 
+The mechanism by which this self-sustained activity emerges is the
+following (see [[citetext:Kuhn2004]] for details): we have a recurrent
+network globally dominated by excitation and the excitatory run-away
+is avoided by a very strong conductance shunting that reduce the
+post-synaptic potentials at high activity levels. Examining the
+plausibility of this mechanism can therefore be reduced to examining
+whether this shunting effect can happen in a physiological range. This
+hypothesis was formulated in the single-compartment approximation,
+thus rendering the comparison with neocortical cells difficult. On the
+other hand, we have a theoretical model that has an accurate surface
+area and a relatively accurate distribution of transfer resistances to
+the soma. We plugged in physiological synaptic and membrane parameters
+(identical to those of *Work 2*) and examined whther a strong enough
+shunting could appear in the physiological range. The criteria for
+this physiological range was that the somatic input conductance should
+be no more than four times the leak conductance (reviewed in
+[[citetext:Destexhe2003]]). In this range, we found that the model
+predicted a shunting too weak to enable such an effect (not shown, but
+see the effects on \(\sigma_V\) and \(\tau_V\) in Figure 4 of *Work
+2*). This analysis predicts that cortical networks can not
+self-sustain activity. In accordance with this view, recent evidences
+accumulate to show that during asynchronous activity the cortex is
+driven by a thalamic drive [[cite:Poulet2012,Reinhold2015]].
 
+We believe that many other theoretical questions could benefit from
+the quantitative insight offered by this model.
 
-We argue here that the prese
+*** Gain modulation from background synaptic input :noexport:
 
-The present modeling procedure resul
-
-*** Understanding recurrent activity
-
-*** Heterogeneity in neocortex and its functional impact
-
-- Does this heterogeneity remains in more mature animals ?
-
-- Mejias and Longtin
-
-- plugin in this electrophysiological heterogeneity in a recurrent
-  model very naturally reproduces one of the key features of
-  population rate activity: the 
+In this section, in the light of our framework including dendritic
+integration, we discuss a classical result of single-cell computation:
+gain modulation from background synaptic input [[cite:Chance2002]]. This
+effect thus appears in the 
 
 *** Modulation of sensory responses by network state
 
-We identified an important principle, the final effect for the
-modulation result from the competition between:
+In *Work 3*, we proposed a general mechanism, that might be an
+important principle for information processing in neural networks. 
 
-- cellular gain modulation [[cite:Ho2000,Chance2002]]. This mechanism is
-  in favor of the quiescent-state.
+The amplitude of the response to a sensory stimulus result from the
+competition between:
+- cellular gain modulation. Background activity and its associated
+  conductance level has a /shunting/ effect on post-synaptic responses
+  [[cite:Ho2000,Chance2002,Altwegg-Boussac2014]]. This mechanism favors
+  high responses in the quiescent-state.
+- recruitment within the network. A given afferent stimulus will be
+  amplified by the recurrent activity in the presence of ongoing
+  activity. This mechanism is in favor of the
+  active-state. Importantly, the potentiation exerted by the active
+  state (with respect to the quiescent state) increases as a function
+  of the number of networks when arranged in a feedforward manner
+  (e.g. A1 -> A2 ->etc...)
 
-- recruitment within the network to amplify the stimulus through the
-  recurrent connectivity. This mechanism is in favor of the active-state.
 
+This also tells us that interpreting measurements requires to take
+care about what is actually measured. Somatic intracellular do not
+predict the same effect as multi-unit activity. The predictions of
+this model is that in terms of multi-unit activity, the response
+should be systematically lower in the Down-state than in the
+Up-state. Note that this property was visible in the data of *Work 3*,
+in the spikes recorded during intracellular recordings (Reig, Vergara
+and Sanchez-Vives, private communication).
 
-The potentiation of the Up-state increases as a function of the number
-of networks when arranged in a feedforward manner.
+A notable exception would appear for very strong stimuli [[cite:Ho2000]]
+(see also Figure 4 in *Work 3*), at very high levels the spiking
+probability is higher in the Down state, but this would presumably
+result in a pathological state (e.e. epileptic seizure) as this effect
+appears when all neurons respond.
 
+*** Getting a grasp of recurrent dynamics :noexport:
 
-Requires great care about what is actually measured. Somatic
-intracellular do not predict the same effect as multi-unit
-activity. The predictions of this model is that in terms of multi-unit
-activity, the response should be systematically lower in the
-Down-state than in the Up-state. A notable exception would appear for
-very strong stimuli [[cite:Ho2000]] , but this would presumably result ina
-pathological situation as this effect appears when all neurons respond
-[[cite:Ho2000]].
+We argue here that the only way to get a grasp of recurrent dynamics
+is the kind of self-consistent approaches used throughout this
+thesis. Recurrent networks are extremely tricky, basic reasoning can
+be very misleading. To illustrate this statement, let's consider the
+network of *Work 4*, where inhibitory cells were more excitable than
+excitatory cells (FS-cells vs RS-cells). What would happen if we would
+lower the excitability of the inhibitory population (e.g. inhibitory
+cells also becomes RS-cells) ? Reasoning suggests that if we lower the
+excitability of inhibitory cells, it will reduce it's firing... But it
+will reduce recurrent inhibition, so, in turn, it will increase the
+firing of inhibitory cells (and excitatory cells), and so on etc...
 
-Those ingredients are also present in our mopulation model of
-neocortical integration(though a bit hidden by the strongest effect of
-the assymetries in excitabilities). Is the variability found in
-[[cite:Arieli1996]] explained by the simple gain modulation proposed
-here. When varying external stimuli
+By generalizing, 
 
-*** Biophysical and circuit mechanisms underlying cortical normalization
+*** Sodium inactivation: a key cellular mechanism for population dynamics :noexport:
+*** Biophysical and circuit mechanisms underlying cortical normalization :noexport:
+
 
 intracortical mechanism because apparent when stimuli are not
 overlapping in the thalamus.
@@ -726,21 +829,37 @@ have an autonomous dynamics, it just follows excitation
 
  not likely to bedur
 
-*** Gain modulation from background synaptic input 
+*** Rationale behind a /bottom-up/ approach: models of high empirical content
 
-In this section, in the light of our framework including dendritic
-integration and , we discuss the classical result of single-cell
-computation: gain modulation from background synaptic input
-[[cite:Chance2002]].
+In *Work 4*, we have built a large-scale model of the supra-granular
+network, the modeling procedure to build this model can be seen as a
+kind of /bottom-up/ approach: starting from the cellular level we
+build-up the dynamical system describing the mesoscopic scale (the
+cortical column) via the /mean-field/ approach, finally we embed this
+description into a spatial model to reach the macroscopic scale (the
+sensory area).
 
-*** On the need of an analytical model for dendritic integration
-
-self-sustained activity ?
-
-*** Sodium inactivation: a key cellular mechanism for population dynamics
-
-\newpage
-
+It is worth comparing the theoretical model resulting from our
+/bottom-up/ approach to other models in the litterature. Competing
+models for macroscopic population dynamics are phenomenological
+models, the most prominent example being the model of
+[[citetext:Rubin2013]] for primary visual cortex computation. This model
+has only two variables: the excitatory and inhibitory population
+activities (comparable to our two population model). It has also very
+few parameters: the 3 parameters of their /power law/ input-output
+function and the connectivity parameters. This very low number of
+parameters might be seen as a clear advantage because it will allow a
+parameter scan to investigate the robustness of the findings. The
+number of parameters is a lot larger in our model (30 parameters:
+ionic channel parameters, synaptic quantities, membrane quantities,
+morphology parameters, circuit properties, ...)  and clearly prevents
+such a procedure. Nonetheless, we argue here that it has a notable
+advantage: it has a higher /empirical content/ [[cite:Popper2005]],
+i.e. because it generates predictions at all scales, it can be
+falsified (or confirmed) by several measurements at all scale (from
+intracellular recordings to large scale optical imaging). Those
+theoretical models thus offer a very convenient (because highly
+testable) framework to understand neocortical computation.
 
 \bibliography{tex/biblio}
 
@@ -767,6 +886,7 @@ self-sustained activity ?
 #+LaTeX_HEADER: \makeatletter \def\@makechapterhead#1{  \vspace*{40\p@}  {\parindent \z@ \raggedright \normalfont   \interlinepenalty\@M   \Large \bfseries  \thechapter \, #1\par\nobreak    \vskip 30\p@  }} \makeatother
 #+LaTeX_HEADER: \usepackage{chngcntr}
 #+LaTeX_HEADER: \counterwithout{figure}{chapter}
+#+LaTeX_HEADER: \renewcommand{\cftbeforesubsecskip}{10pt}
 
 # #+OPTIONS: num: 1
 # #+LaTeX_HEADER:\usepackage{microtype} % Slightly tweak font spacing for aesthetics
